@@ -28,6 +28,18 @@
   padding: 10px;
 }
 
+/* Styles for footer content */
+#flexibleFooter #footerContent h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#flexibleFooter #footerContent span {
+  font-size: 14px;
+  color: #ccc;
+}
+
 /* Styles for images block */
 .image-block {
   display: flex;
