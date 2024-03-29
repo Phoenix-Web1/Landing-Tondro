@@ -1,8 +1,33 @@
 /* Styles for the footer */
-#flexibleFooter {
-    background-color: #1f1f1f;
-    color: #fff;
-    padding: 2px 20px 20px 20px;
-    text-align: center;
+#footerContent {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-around; /* Adjust as needed */
   }
   
+  #footerContent > div {
+    flex: 1;
+    text-align: right; /* Align text to the right */
+    margin-bottom: 20px; /* Add margin between parts */
+  }
+  
+  #footerContent h2,
+  #footerContent span {
+    line-height: 23px;
+  }
+  
+  #footerContent div {
+    padding: 10px;
+  }
+  
+  /* Styles for images block */
+  .image-block {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .image-block img {
+    margin-left: 10px;
+    height: 50px;
+  }
