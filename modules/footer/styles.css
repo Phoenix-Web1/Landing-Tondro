@@ -80,3 +80,19 @@
     float: right; /* Float part 4 to the right */
   }
 }
+
+/* Additional styles for image block */
+#flexibleFooter .image-block {
+  margin-top: 20px;
+  text-align: center; /* Center the images */
+}
+
+#flexibleFooter .image-block img {
+  margin: 0 5px; /* Adjust spacing between images */
+}
+
+/* Footer text below image block */
+#flexibleFooter .footer-text {
+  margin-top: 10px;
+  text-align: center;
+}
