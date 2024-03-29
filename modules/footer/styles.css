@@ -48,6 +48,12 @@
 #flexibleFooter #footerContent a:hover {
   text-decoration: underline;
 }
+/* Styles for footer heading */
+#flexibleFooter #footerContent h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 /* Styles for images block */
 .image-block {
   display: flex;
