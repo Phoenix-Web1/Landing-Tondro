@@ -39,3 +39,44 @@
   margin-left: 10px;
   height: 50px;
 }
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  /* Set the order of part3 and part5 to swap their positions */
+  #part3 {
+    order: 2; /* Set the order of part3 to 2 */
+  }
+
+  #part5 {
+    order: 1; /* Set the order of part5 to 1 */
+  }
+
+  #part1 {
+    display: none; /* Hide part1 for mobile devices */
+  }
+
+  #part2-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #part2 {
+    width: 100%;
+  }
+
+  #part5 {
+    width: 100%;
+  }
+
+  /* Adjustments for parts 3 and 4 */
+  #footerContent > div:nth-child(3), /* Select the third child div */
+    #footerContent > div:nth-child(4) {
+    /* Select the fourth child div */
+    width: 50%;
+    float: left;
+  }
+
+  #footerContent > div:nth-child(4) {
+    float: right; /* Float part 4 to the right */
+  }
+}
