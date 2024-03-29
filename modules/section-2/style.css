@@ -1,0 +1,33 @@
+.SEC-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+.SEC-2 *{
+    text-align: center;
+}
+.SEC-2>h1{
+    color: #252736;
+    font-size: 25px;
+}
+.SEC-2>div:first-of-type{
+    display: flex;
+    width: 100% ;
+    justify-content: center;
+    gap: 4%;
+}
+.SEC-2>div:first-of-type>button{
+    font-size: 15px;
+    color:#8C8C8C ;
+    width: 45%;
+    height: 50px;
+    border: none;
+    background-color: #fff ;
+}
+.SEC-2>div:first-of-type>.active-sec2{
+    color: #003D95 !important;
+    margin-bottom: 100pxs;
+    border-bottom:2px #003D95 solid ;
+}
