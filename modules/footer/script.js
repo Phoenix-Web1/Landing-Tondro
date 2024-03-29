@@ -32,8 +32,18 @@ function createFooter() {
     let div = document.createElement("div");
     let h2 = document.createElement("h2");
     h2.textContent = item.heading;
-    let span = document.createElement("span");
-    span.textContent = item.subtext;
+    var span = document.createElement("span");
+    if (item.isLink) {
+      let link = document.createElement("a");
+      link.href =
+        item.subtext === "info@tonrow.mail.com"
+          ? "mailto:" + item.subtext
+          : "#";
+      link.textContent = item.subtext;
+      span.appendChild(link);
+    } else {
+      span.textContent = item.subtext;
+    }
     div.appendChild(h2);
     div.appendChild(span);
     footerContent.appendChild(div);
