@@ -105,20 +105,37 @@
   #footerContent > div:nth-child(4) {
     float: right; /* Float part 4 to the right */
   }
-}
+  /* Additional styles for image block */
+  #flexibleFooter .image-block {
+    margin-top: 20px;
+    text-align: center; /* Center the images */
+  }
 
-/* Additional styles for image block */
-#flexibleFooter .image-block {
-  margin-top: 20px;
-  text-align: center; /* Center the images */
-}
+  #flexibleFooter .image-block img {
+    margin: 0 5px; /* Adjust spacing between images */
+  }
 
-#flexibleFooter .image-block img {
-  margin: 0 5px; /* Adjust spacing between images */
-}
+  /* Footer text below image block */
+  #flexibleFooter .footer-text {
+    margin-top: 10px;
+    text-align: center;
+  }
+  /* Adjust footer content layout for mobile */
+  #flexibleFooter #footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Footer text below image block */
-#flexibleFooter .footer-text {
-  margin-top: 10px;
-  text-align: center;
+  #flexibleFooter #footerContent > div {
+    text-align: center;
+  }
+
+  /* Adjust image block layout for mobile */
+  #flexibleFooter .image-block {
+    justify-content: center;
+  }
+
+  #flexibleFooter .image-block img {
+    margin: 0 5px;
+  }
 }
