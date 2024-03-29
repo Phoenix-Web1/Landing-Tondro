@@ -1,0 +1,80 @@
+
+/*please,read the names carefully, I love you😓 */
+:root {
+    --title-color: #353535;
+    --text-color: #787878;
+
+    /* btn colors */
+    --btn-text-color: #ECECEC;
+    --btn-backgroundcolor: #003D95;
+}
+
+*{
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* hero section */
+#hero {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-image {
+    background-color: #6168FF;
+    width:330px;
+    height: 327px;;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15%;
+}
+
+.hero-image :nth-child(1){
+    position: absolute;
+    top: -50px;
+}
+
+.hero-image :nth-child(2){
+    position: absolute;
+    /* top: ; */
+    right:10% ;
+    top: -15px;
+}
+
+.hero-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-description * {
+    text-align: center;
+}
+
+
+/* description title */
+.hero-description h1 {
+    font-size: 50px;
+    color:var(--title-color);
+    margin: 0;
+}
+
+/* description text */
+.hero-description span{
+font-size: 16px;
+color:var(--text-color)
+}
+
+.hero-description button {
+    width: 172px;
+    height: 43px;
+    margin: 0 auto;
+    margin-top: 5%;
+    color: var(--btn-text-color);
+    background-color: var(--btn-backgroundcolor);
+    border: none;
+    border-radius: 5px;
+}
+
