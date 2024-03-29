@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+button{
+    border-radius: 5px;
+}
 .SEC-2{
     display: flex;
     flex-direction: column;
@@ -9,7 +16,7 @@
     text-align: center;
 }
 .SEC-2>h1{
-    color: #252736;
+    color: #1F1F1F;
     font-size: 25px;
 }
 .SEC-2>div:first-of-type{
@@ -30,4 +37,40 @@
     color: #003D95 !important;
     margin-bottom: 100pxs;
     border-bottom:2px #003D95 solid ;
+}
+.SEC-2>div:last-of-type{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: centerss;
+}
+.SEC-2>div:last-of-type>div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.SEC-2>div:last-of-type>div>h2{
+    font-size: 25px;
+    color: #1F1F1F;
+}
+.SEC-2>div:last-of-type>div>p{
+    width: 80%;
+    color:#353535 ;
+}
+.SEC-2>div:last-of-type>div>button{
+    background-color: #fff;
+    color: #003D95;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+.SEC-2>div:last-of-type>div>button::before{
+    content: url(img/arrow-left.png);
 }
