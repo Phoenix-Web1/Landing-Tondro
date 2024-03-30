@@ -83,14 +83,14 @@
 
 /* description title */
 .hero-description h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: var(--title-color);
     margin: 0;
 }
 
 /* description text */
 .hero-description span {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color)
 }
 
