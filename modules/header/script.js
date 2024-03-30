@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle navigation visibility on button click
   toggleNavButton.addEventListener("click", function () {
-    nav.classList.toggle("show");
+    nav.classList.toggle("open");
   });
 });

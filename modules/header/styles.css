@@ -38,7 +38,17 @@
 }
 
 #mainNav {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden */
+  background-color: #333;
+  height: 100%;
+  width: 250px;
+  transition: right 0.3s ease;
+}
+
+#mainNav.open {
+  right: 0; /* Slide in from right to left */
 }
 
 #menuItems {
@@ -47,16 +57,17 @@
 }
 
 #menuItems li {
-  display: inline;
-  margin-right: 20px;
+  margin: 20px 0;
 }
 
 #menuItems li a {
   color: #fff;
   text-decoration: none;
+  padding: 10px 20px;
+  display: block;
 }
 
-/* Dynamic styles */
-#mainNav.show {
-  display: block;
+#menuItems li a:hover {
+  background-color: #555;
+  border-radius: 5px;
 }
