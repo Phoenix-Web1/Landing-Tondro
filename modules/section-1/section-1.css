@@ -1,107 +1,120 @@
-@font-face {
-    font-family: IRANSans;
-    src: url(./font/IRANSansXV.woff);
-}
+  /* Define the custom font */
+  @font-face {
+      font-family: IRANSans;
+      src: url(./font/IRANSansXV.woff);
+  }
 
+  /* Define the root variables for colors */
+  :root {
+      --title-color: #353535;
+      --text-color: #787878;
+      --btn-text-color: #ECECEC;
+      --btn-backgroundcolor: #003D95;
+  }
 
-/*please,read the names carefully, I love you😓 */
-:root {
-    --title-color: #353535;
-    --text-color: #787878;
+  /* Apply the custom font to all elements */
+  * {
+      font-family: IRANSans;
+  }
 
-    /* btn colors */
-    --btn-text-color: #ECECEC;
-    --btn-backgroundcolor: #003D95;
-}
+  /* Styles for the hero banner section */
+  #hero-banner-section {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
 
+  /* Styles for the hero banner container */
+  .hero-banner-container {
+      margin: 0 auto;
+      padding-top: 12%;
+      position: relative;
+      overflow: hidden;
+      height: 320px;
+      max-width: 375px;
+      width: 100%;
+  }
 
-* {
-    font-family: IRANSans;
-}
+  /* Styles for the hero banner background */
+  .hero-banner-background {
+      background-color: #6168FF;
+      width: 92%;
+      height: 90%;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 15%;
+  }
 
-/* hero section */
-#hero-banner-section{
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+  /* Styles for the subtract element */
+  .subtract {
+      position: absolute;
+      width: 100%;
+      bottom: -12px;
+  }
 
-.hero-baner-container{
-    margin: 0 auto;
-    padding-top: 12%;
-    position: relative;
-    overflow: hidden;
-    height: 320px;
-    max-width: 375px;
-    width: 100%;
- }
+  /* Styles for the first image (hero) */
+  .hero-banner-background>img:nth-child(1) {
+      position: absolute;
+      top: -40px;
+      width: 295px;
+  }
 
-.hero-baner-background  {
-    background-color: #6168FF;
-    width: 92%;
-    height: 90%;
-    margin: 0 auto;
-    position: relative;
-    border-radius: 15%;
-}
+  /* Styles for the second image (logo) */
+  .hero-banner-background>img:nth-child(2) {
+      position: absolute;
+      right: 10%;
+      top: -15px;
+  }
 
-/* Subtract image */
-.Subtract {
-    position: absolute;
-    width: 100%;
-    bottom: -12px;
-}
+  .hero-banner-background>img:nth-child(2) {
+      position: absolute;
+      right: 10%;
+      top: -15px;
+  }
 
-/* hero image */
-.hero-baner-background  :nth-child(1) {
-    position: absolute;
-    top: -40px;
-    /* width: 90%; */
-    width: 295px;
-}
+  .hero-banner-background>img:nth-child(3) {
+      width: 100%;
+      margin: 0 auto;
+  }
 
-/* logo image */
-.hero-baner-background  :nth-child(2) {
-    position: absolute;
-    /* top: ; */
-    right: 10%;
-    top: -15px;
-}
+  /* Styles for the hero description */
+  .hero-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -35px;
+      z-index: 1;
+  }
 
-.hero-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+  /* Center align the text elements within the hero description */
+  .hero-description * {
+      text-align: center;
+  }
 
-.hero-description * {
-    text-align: center;
-}
+  /* Styles for the hero title */
+  .hero-description h1 {
+      font-size: 40px;
+      color: var(--title-color);
+      margin: 0;
+  }
 
+  /* Styles for the hero subtitle */
+  .hero-description span {
+      font-size: 14px;
+      color: var(--text-color);
+  }
 
-/* description title */
-.hero-description h1 {
-    font-size: 40px;
-    color: var(--title-color);
-    margin: 0;
-}
-
-/* description text */
-.hero-description span {
-    font-size: 14px;
-    color: var(--text-color)
-}
-
-.hero-description button {
-    width: 172px;
-    height: 43px;
-    margin: 0 auto;
-    margin-top: 5%;
-    color: var(--btn-text-color);
-    background-color: var(--btn-backgroundcolor);
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-}
+  /* Styles for the hero button */
+  .hero-description button {
+      width: 172px;
+      height: 43px;
+      margin: 0 auto;
+      margin-top: 5%;
+      color: var(--btn-text-color);
+      background-color: var(--btn-backgroundcolor);
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+  }
