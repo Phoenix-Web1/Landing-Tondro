@@ -9,12 +9,11 @@
 #footerContent {
   display: flex; /* Use flexbox for footer content */
   flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: space-around; /* Adjust as needed */
+  gap: 10%;
 }
 
 #footerContent > div {
   flex: 1; /* Distribute available space equally */
-  text-align: right; /* Align text to the right */
   margin-bottom: 20px; /* Add margin between parts */
 }
 
@@ -43,30 +42,23 @@
 @media only screen and (max-width: 600px) {
   /* Set the order of part3 and part5 to swap their positions */
   #part3 {
-    order: 2; /* Set the order of part3 to 2 */
+    width: 48%;
   }
-
-  #part5 {
-    order: 1; /* Set the order of part5 to 1 */
+  #part4{
+    width: 48%;
   }
-
+  #part5 , #part5 *{
+    width: 48%;
+    text-align: center !important;
+  }
+  #part2{
+    width: 48%;
+  }
   #part1 {
-    display: none; /* Hide part1 for mobile devices */
+    display: none;
   }
 
-  #part2-container {
-    width: 100%; /* Set width to 100% for part2 container */
-    display: flex; /* Use flexbox for part2 container */
-    flex-direction: column; /* Set flex direction to column */
-  }
 
-  #part2 {
-    width: 100%; /* Set width to 100% for part2 */
-  }
-
-  #part5 {
-    width: 100%; /* Set width to 100% for part5 */
-  }
 
   /* Adjustments for parts 3 and 4 */
   #footerContent > div:nth-child(3), /* Select the third child div */
