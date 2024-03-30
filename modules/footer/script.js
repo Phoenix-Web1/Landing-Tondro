@@ -1,85 +1,212 @@
 // Function to create footer
 function createFooter() {
-    // Create footer element
-    let footer = document.createElement("footer");
-    footer.id = "flexibleFooter";
-  
-    // Create footer content container
-    let footerContent = document.createElement("div");
-    footerContent.id = "footerContent";
-  
-    // Define footer content
-    let content = [
-      {
-        heading: "ایمیل",
-        subtext: "info@tonrow.mail.com",
-        isLink: true
-      },
-      {
-        heading: "شماره تماس",
-        subtext: "1800",
-        isLink: false
-      },
-      {
-        heading: "آدرس",
-        subtext: "بوشهر،صلح آباد، خیابان صدرا، پشت پمپ بنزین وزیری",
-        isLink: false
-      }
-    ];
-  
-    // Add footer content
-    content.forEach(function (item) {
-      let div = document.createElement("div");
+  // Create footer element
+  let footer = document.createElement("footer");
+  footer.id = "flexibleFooter";
+
+  // Create footer content container
+  let footerContent = document.createElement("div");
+  footerContent.id = "footerContent";
+
+  // Create footer parts
+  let parts = [
+    {
+      id: "part1",
+      content: [
+        { heading: "ایمیل", subtext: "info@tonrow.mail.com", isLink: true }, // Define content for part 1
+        { heading: "شماره تماس", subtext: "1800", isLink: false }, // Define content for part 1
+        {
+          heading: "آدرس",
+          subtext: "بوشهر،صلح آباد، خیابان صدرا، پشت پمپ بنزین وزیری",
+          isLink: false,
+        }, // Define content for part 1
+      ],
+    },
+    {
+      id: "part2",
+      heading: "سفیران", // Define heading for part 2
+      links: [
+        { text: "دانلود اپ سفیر", url: "#" }, // Define links for part 2
+        { text: "پرسش های متداول سفیران", url: "#" }, // Define links for part 2
+        { text: "شرایط و قوانین سفیران", url: "#" }, // Define links for part 2
+      ],
+    },
+    {
+      id: "part3",
+      heading: "خدمات", // Define heading for part 3
+      links: [
+        { text: "خرید منزل", url: "#" }, // Define links for part 3
+        { text: "درخواست جا به جایی", url: "#" }, // Define links for part 3
+        { text: "بازگشت وجه", url: "#" }, // Define links for part 3
+        { text: "پشتیبانی", url: "#" }, // Define links for part 3
+      ],
+    },
+    {
+      id: "part4",
+      heading: "سفیر", // Define heading for part 4
+      links: [
+        { text: "وبلاگ سفیر", url: "#" }, // Define links for part 4
+        { text: "لوگو و هویت سفیر", url: "#" }, // Define links for part 4
+        { text: "قوانین و مقررات", url: "#" }, // Define links for part 4
+        { text: "درباره ما", url: "#" }, // Define links for part 4
+        { text: "تماس با ما", url: "#" }, // Define links for part 4
+        { text: "فرصت شغلی", url: "#" }, // Define links for part 4
+      ],
+    },
+    {
+      id: "part5",
+      heading: "سفیر", // Changed Part 5 title to "سفیر"
+      imageUrl: "your-image-url.jpg", // Add image URL for part 5
+      subtext: "حمل و نقل با ما، آسودگی خاطر برای شما!", // Add subtext for part 5
+    }, // Add imageUrl and subtext for Part 5
+  ];
+
+  // Check if it's mobile
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+  // Append parts to footer
+  parts.forEach(function (part) {
+    // Create div for each part
+    let div = document.createElement("div");
+    div.id = part.id; // Set id for each part
+    div.style.textAlign = "right"; // Align text to the right
+
+    // Check part type and create content accordingly
+    if (part.content) {
+      // Create content for part with content
+      part.content.forEach(function (item, index) {
+        // Create heading element
+        let h2Div = document.createElement("div");
+        let h2 = document.createElement("h2");
+        h2.textContent = item.heading; // Set heading text
+        h2Div.appendChild(h2);
+
+        // Create subtext element
+        let span = document.createElement("span");
+        span.style.textAlign = "right"; // Align text to the right
+        if (item.isLink && index === 0) {
+          let mailtoLink = document.createElement("a");
+          mailtoLink.href = "mailto:" + item.subtext; // Set mailto link
+          mailtoLink.textContent = item.subtext;
+          mailtoLink.style.textDecoration = "underline"; // Keep underline
+          mailtoLink.style.color = "inherit"; // Inherit color from parent
+          span.appendChild(mailtoLink);
+        } else {
+          span.textContent = item.subtext;
+        }
+
+        // Append heading and subtext to div
+        h2Div.appendChild(span);
+        div.appendChild(h2Div);
+      });
+    } else if (part.heading && part.links) {
+      // Create content for part with heading and links
+      let h2Div = document.createElement("div");
       let h2 = document.createElement("h2");
-      h2.textContent = item.heading;
-      let span = document.createElement("span");
-      if (item.isLink) {
-        let link = document.createElement("a");
-        link.href = item.subtext === "info@tonrow.mail.com" ? "mailto:" + item.subtext : "#";
-        link.textContent = item.subtext;
-        span.appendChild(link);
-      } else {
-        span.textContent = item.subtext;
-      }
-      div.appendChild(h2);
-      div.appendChild(span);
-      footerContent.appendChild(div);
-    });
-  
-    // Append footer content container to footer
-    footer.appendChild(footerContent);
-  
-    // Additional block with images
-    let imageBlock = document.createElement("div");
-    imageBlock.classList.add("image-block");
-  
-    // Function to add image
-    function addImage(imageSrc, altText) {
+      h2.textContent = part.heading; // Set heading text
+      h2.style.textAlign = "right";
+      h2Div.appendChild(h2);
+      div.appendChild(h2Div);
+
+      part.links.forEach(function (link) {
+        // Create link elements
+        let a = document.createElement("a");
+        a.href = link.url;
+        a.textContent = link.text;
+        a.style.textDecoration = "none";
+        a.style.color = "inherit";
+        let linkDiv = document.createElement("div");
+        linkDiv.style.textAlign = "right";
+        linkDiv.appendChild(a);
+        div.appendChild(linkDiv);
+      });
+    } else if (part.heading === "سفیر" && part.imageUrl && part.subtext) {
+      // Create content for Part 5 with image and subtext
+      let imageTitleContainer = document.createElement("div");
+      imageTitleContainer.style.display = "flex";
+      imageTitleContainer.style.alignItems = "center"; // Align items vertically
+      imageTitleContainer.style.justifyContent = "flex-end"; // Align items to the end
+
+      // Create image element
       let image = document.createElement("img");
-      image.src = imageSrc;
-      image.alt = altText;
-      imageBlock.appendChild(image);
+      image.src = part.imageUrl; // Set image source
+      image.alt = part.heading;
+      image.style.marginLeft = "10px"; // Add margin to separate from text
+      image.style.height = "30px"; // Adjust height as needed
+      imageTitleContainer.appendChild(image);
+
+      // Create title element
+      let h2 = document.createElement("h2");
+      h2.textContent = part.heading; // Set heading text
+      h2.style.textAlign = "right";
+      imageTitleContainer.appendChild(h2);
+
+      // Append image and title container to the div
+      div.appendChild(imageTitleContainer);
+
+      // Create span element for subtext
+      let span = document.createElement("span");
+      span.textContent = part.subtext; // Set subtext
+      div.appendChild(span);
+    } else {
+      div.textContent = part.text;
     }
-  
-    // Adding images
-    addImage("image1-url.jpg", "Image 1");
-    addImage("image2-url.jpg", "Image 2");
-    addImage("image3-url.jpg", "Image 3");
-    // Add more images as needed
-  
-    // Append image block to footer
-    footer.appendChild(imageBlock);
-  
-    // Add footer text below image block
-    let footerText = document.createElement("div");
-    footerText.classList.add("footer-text");
-    footerText.textContent = "تمامی حقوق مادی و معنوی این وبسایت متعلق به تنرو است.";
-    footer.appendChild(footerText);
-  
-    // Append footer to body
-    document.body.appendChild(footer);
+
+    // Swap position of Part 3 and Part 5 on mobile
+    if (isMobile && part.id === "part3") {
+      let part5Element = document.getElementById("part5");
+      if (part5Element) {
+        footerContent.appendChild(part5Element); // Swap position of Part 3 and Part 5 on mobile
+      }
+    }
+
+    footerContent.appendChild(div); // Append current part's div to footer content
+  });
+
+  // Additional block with images
+  let imageBlock = document.createElement("div");
+  imageBlock.classList.add("image-block"); // Add class for styling
+
+  // Function to add image
+  function addImage(imageSrc, altText) {
+    let image = document.createElement("img");
+    image.src = imageSrc;
+    image.alt = altText;
+    image.style.marginLeft = "10px"; // Adjust as needed
+    image.style.height = "50px"; // Adjust as needed
+    imageBlock.appendChild(image);
   }
-  
-  // Call function to create footer
-  createFooter();
-  
+
+  // Adding images
+  addImage("image1-url.jpg", "Image 1");
+  addImage("image2-url.jpg", "Image 2");
+  addImage("image3-url.jpg", "Image 3");
+  // Add more images if needed
+
+  // Append footer content to footer
+  footer.appendChild(footerContent);
+
+  // Append image block
+  footer.appendChild(imageBlock);
+
+  // Add border line under images div
+  let imageBlockBorder = document.createElement("div");
+  imageBlockBorder.style.width = "100%";
+  imageBlockBorder.style.borderBottom = "1px solid black"; // Add border line
+  imageBlockBorder.style.marginTop = "10px"; // Adjust margin as needed
+  footer.appendChild(imageBlockBorder);
+
+  // Add span under the border line
+  let spanUnderBorder = document.createElement("span");
+  spanUnderBorder.textContent =
+    "تمامی حقوق مادی و معنوی این وبسایت متعلق به تنرو است."; // Add your text here
+  spanUnderBorder.style.display = "block"; // Display as block to place it below the border line
+  spanUnderBorder.style.marginTop = "10px"; // Adjust margin as needed
+  footer.appendChild(spanUnderBorder);
+
+  // Append footer to body
+  document.body.appendChild(footer);
+}
+
+// Call function to create footer
+createFooter();
