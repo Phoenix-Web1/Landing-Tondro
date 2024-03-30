@@ -58,4 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleNavButton.addEventListener("click", function () {
     nav.classList.toggle("open");
   });
+
+  // Close navigation when clicking outside of it
+  document.addEventListener("click", function (event) {
+    const nav = document.getElementById("mainNav");
+    const toggleNavButton = document.getElementById("toggleNav");
+    if (
+      !nav.contains(event.target) &&
+      event.target !== toggleNavButton &&
+      nav.classList.contains("open")
+    ) {
+      nav.classList.remove("open");
+    }
+  });
 });
