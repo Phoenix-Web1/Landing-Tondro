@@ -1,3 +1,9 @@
+@font-face {
+    font-family: face;
+    src: url();
+}
+
+
 /*please,read the names carefully, I love you😓 */
 :root {
     --title-color: #353535;
@@ -7,6 +13,7 @@
     --btn-text-color: #ECECEC;
     --btn-backgroundcolor: #003D95;
 }
+
 
 * {
     font-family: Arial, Helvetica, sans-serif;
