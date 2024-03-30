@@ -1,0 +1,62 @@
+/* Static styles */
+#mainHeader {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.dynamicButton {
+  background-color: #003d95;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#toggleNav {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#mainNav {
+  display: none;
+}
+
+#menuItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+#menuItems li {
+  display: inline;
+  margin-right: 20px;
+}
+
+#menuItems li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Dynamic styles */
+#mainNav.show {
+  display: block;
+}
