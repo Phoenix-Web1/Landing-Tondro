@@ -1,59 +1,60 @@
 /* Styling for the main header */
 #mainHeader {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  display: flex; /* Display as flexbox */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Center align items vertically */
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top */
   z-index: 1000; /* Ensuring it stays on top */
 }
 
 /* Styling for dynamic buttons */
 .dynamicButton {
-  background-color: #003d95;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+  background-color: #003d95; /* Background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Center align text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Display as inline block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  border-radius: 5px; /* Border radius */
 }
 
 /* Styling for the toggle navigation button */
 #toggleNav {
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+  background-color: #333; /* Background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Center align text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Display as inline block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  border-radius: 5px; /* Border radius */
 }
 
 /* Styling for the main navigation */
 #mainNav {
-  position: fixed;
-  top: 0;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to the top */
   right: -250px; /* Initially hidden off-screen */
-  background-color: #f5faff;
-  height: 100%;
-  width: 250px;
+  background-color: #f5faff; /* Background color */
+  height: 100%; /* Full height */
+  width: 250px; /* Fixed width */
   transition: right 0.3s ease; /* Smooth transition for sliding animation */
-  padding: 115px 40px 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  padding: 115px 40px 20px; /* Padding */
+  box-sizing: border-box; /* Include padding in width */
+  display: flex; /* Display as flexbox */
+  flex-direction: column; /* Arrange items in column */
   align-items: flex-end; /* Align items to the right */
-  border-radius: 6px 0px 0px 10px;
+  border-radius: 6px 0px 0px 10px; /* Border radius */
+  z-index: 999; /* Ensure it stays on top of the overlay */
 }
 
 /* Styling for the main navigation when it's open */
@@ -63,31 +64,36 @@
 
 /* Styling for menu items */
 #menuItems {
-  list-style-type: none;
-  padding: 0;
-  text-align: right;
-  padding-top: 35px;
+  list-style-type: none; /* No list style */
+  padding: 0; /* No padding */
+  text-align: right; /* Right align text */
+  padding-top: 35px; /* Padding top */
 }
 
 /* Styling for individual menu items */
 #menuItems li {
-  margin: 20px 0;
+  margin: 20px 0; /* Margin */
 }
 
 /* Styling for anchor tags within menu items */
 #menuItems li a {
-  color: #a7a7a9;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  font-size: 22px;
+  color: #8c8c8c; /* Change color for menu items */
+  text-decoration: none; /* No underline */
+  padding: 10px 20px; /* Padding */
+  display: block; /* Display as block */
+  font-size: 22px; /* Font size */
+}
+
+/* Set color for the first link */
+#menuItems li:first-child a {
+  color: #164695; /* Color for the first link */
 }
 
 /* Styling for the logo container */
 .logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Display as flexbox */
+  flex-direction: column; /* Arrange items in column */
+  align-items: center; /* Center align items */
   position: relative; /* Add position relative */
 }
 
@@ -98,25 +104,26 @@
 
 /* Styling for the line below the logo */
 .logo-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 14%;
-  transform: translateX(-50%);
-  width: 185px;
-  height: 1px;
-  background-color: #0000001c;
+  content: ""; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Stick to the bottom */
+  left: 14%; /* Position from left */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 185px; /* Width */
+  height: 1px; /* Height */
+  background-color: #0000001c; /* Change color of the line */
   top: 54px; /* Adjust position relative to logo */
 }
 
 /* Styling for the overlay */
 #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+  width: calc(100% - 250px); /* Adjust width to exclude sidebar menu */
+  height: 100%; /* Full height */
   background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-  z-index: 998; /* Ensure it covers the sidebar but stays below the header */
+  z-index: 1001; /* Ensure it covers the entire page including the header */
   display: none; /* Initially hidden */
+  backdrop-filter: blur(2px); /* Apply blur effect */
 }
