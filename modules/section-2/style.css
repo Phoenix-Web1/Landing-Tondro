@@ -1,56 +1,69 @@
 @font-face {
-    font-family:IRANSans ;
+    font-family: IRANSans;
     src: url(font/IRANSansXV.woff);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: IRANSans;
 }
-button{
+
+button {
     border-radius: 5px;
+    cursor: pointer;
 }
-.SEC-2{
+
+.SEC-2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     justify-content: center;
+    margin: 0 auto;
+    align-items: center;
 }
-.SEC-2 *{
+
+.SEC-2 * {
     text-align: center;
 }
-.SEC-2>h1{
+
+.SEC-2>h1 {
     color: #1F1F1F;
     font-size: 25px;
 }
-.SEC-2>div:first-of-type{
+
+.SEC-2>div:first-of-type {
     display: flex;
-    width: 100% ;
+    width: 100%;
     justify-content: center;
+    flex-direction: row !important;
     gap: 4%;
 }
-.SEC-2>div:first-of-type>button{
+
+.SEC-2>div:first-of-type>button {
     font-size: 15px;
-    color:#8C8C8C ;
+    color: #8C8C8C;
     width: 45%;
     height: 50px;
     border: none;
-    background-color: #fff ;
+    background-color: #fff;
 }
-.SEC-2>div:first-of-type>.active-sec2{
+
+.SEC-2>div:first-of-type>.active-sec2 {
     color: #003D95 !important;
     margin-bottom: 100pxs;
-    border-bottom:2px #003D95 solid ;
+    border-bottom: 2px #DCDCDC solid;
 }
-.SEC-2>div:last-of-type{
+
+.SEC-2>div {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: centerss;
+    justify-content: center;
 }
-.SEC-2>div:last-of-type>div{
+
+.SEC-2>div>div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -58,25 +71,74 @@ button{
     justify-content: center;
     align-items: center;
 }
-.SEC-2>div:last-of-type>div>h2{
+
+.SEC-2>div>div>h2 {
     font-size: 25px;
     color: #1F1F1F;
 }
-.SEC-2>div:last-of-type>div>p{
+
+.SEC-2>div>div>p {
     width: 80%;
-    color:#353535 ;
+    color: #353535;
 }
-.SEC-2>div:last-of-type>div>button{
+
+.SEC-2>div>div>button {
     background-color: #fff;
     color: #003D95;
-    width: 50%;
+    width: 40%;
     height: 35px;
+    display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     font-size: 15px;
 }
-.SEC-2>div:last-of-type>div>button::before{
+
+.SEC-2>div>div>button::before {
     content: url(img/arrow-left.png);
+    height: 23px;
+}
+
+@media screen and (min-width: 950px) {
+    .SEC-2>h1 {
+        font-size: 40px;
+    }
+
+    .SEC-2>div:first-of-type {
+        display: none;
+    }
+
+    .SEC-2>div {
+        flex-direction: row !important;
+        margin: 0 50px;
+        border: 1px #f3f3f3 solid;
+        box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
+    }
+
+
+    .SEC-2>div>* {
+        width: 40% !important;
+    }
+
+    .SEC-2>div>div{
+        align-items: flex-end;
+    }
+
+    .SEC-2>div>div>h2 {
+        font-size: 24px;
+    }
+
+    .SEC-2>div>div>p {
+        direction: rtl;
+        text-align: right;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .SEC-2>div>div>button {
+        margin: 0 auto !important;
+        font-size: 16px !important;
+    }
+
 }
