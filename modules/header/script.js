@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.createElement("nav");
   nav.id = "mainNav";
 
+  // Create an image element for the logo
+  const logoImg = document.createElement("img");
+  logoImg.src = "logo.png"; // Replace with your logo image URL
+  logoImg.alt = "Logo";
+  nav.appendChild(logoImg);
+
   // Create ul element
   const ul = document.createElement("ul");
   ul.id = "menuItems";
