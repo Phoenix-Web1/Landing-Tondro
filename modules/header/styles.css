@@ -48,7 +48,7 @@
   height: 100%;
   width: 250px;
   transition: right 0.3s ease; /* Smooth transition for sliding animation */
-  padding: 40px 20px;
+  padding: 115px 40px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: -3%;
+  left: 14%;
   transform: translateX(-50%);
   width: 185px;
   height: 1px;
