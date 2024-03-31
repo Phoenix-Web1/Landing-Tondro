@@ -44,7 +44,7 @@
   position: fixed;
   top: 0;
   right: -250px; /* Initially hidden off-screen */
-  background-color: #333;
+  background-color: #f5faff;
   height: 100%;
   width: 250px;
   transition: right 0.3s ease; /* Smooth transition for sliding animation */
@@ -76,16 +76,11 @@
 
 /* Styling for anchor tags within menu items */
 #menuItems li a {
-  color: #fff;
+  color: #a7a7a9;
   text-decoration: none;
   padding: 10px 20px;
   display: block;
-}
-
-/* Hover effect for menu items */
-#menuItems li a:hover {
-  background-color: #555;
-  border-radius: 5px;
+  font-size: 22px;
 }
 
 /* Styling for the logo container */
@@ -110,7 +105,7 @@
   transform: translateX(-50%);
   width: 185px;
   height: 1px;
-  background-color: #ffffff4d;
+  background-color: #0000001c;
   top: 54px; /* Adjust position relative to logo */
 }
 
