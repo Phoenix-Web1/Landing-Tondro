@@ -127,3 +127,9 @@
   display: none; /* Initially hidden */
   backdrop-filter: blur(2px); /* Apply blur effect */
 }
+/* Styling for the menu icon */
+#menuIcon {
+  fill: white; /* Icon color */
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
+}
