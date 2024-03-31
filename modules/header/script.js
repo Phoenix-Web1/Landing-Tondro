@@ -26,13 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Create an image element for the logo
   const logoImg = document.createElement("img");
-  logoImg.src = "logo.png"; // Replace with your logo image URL
+  logoImg.src = "/media/tonrow-logo.png"; // Replace with your logo image URL
   logoImg.alt = "Logo";
+  logoImg.style.float = "right"; // Set the float property to right
   nav.appendChild(logoImg);
 
   // Create ul element
   const ul = document.createElement("ul");
   ul.id = "menuItems";
+  ul.style.textAlign = "right"; // Set text alignment to right
 
   // Array of menu items
   const menuItems = [
