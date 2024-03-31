@@ -1,4 +1,6 @@
+// Execute when DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Function to create dynamic buttons
   function createDynamicButton(text) {
     const dynamicButton = document.createElement("button");
     dynamicButton.textContent = text;
@@ -10,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.createElement("header");
   header.id = "mainHeader";
 
-  // Create dynamic button element
+  // Create dynamic button element for login/register
   const dynamicButton = createDynamicButton("ورود/ثبت نام");
   header.appendChild(dynamicButton);
 
-  // Create toggle button element
+  // Create toggle button element for menu
   const toggleNavButton = document.createElement("button");
   toggleNavButton.textContent = "Menu";
   toggleNavButton.id = "toggleNav";
@@ -24,17 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.createElement("nav");
   nav.id = "mainNav";
 
-  // Create an image element for the logo
-  const logoImg = document.createElement("img");
-  logoImg.src = "/media/tonrow-logo.png"; // Replace with your logo image URL
-  logoImg.alt = "Logo";
-  logoImg.style.float = "right"; // Set the float property to right
-  nav.appendChild(logoImg);
+  // Create logo container
+  const logoContainer = document.createElement("div");
+  logoContainer.classList.add("logo-container");
 
-  // Create ul element
+  // Create logo image
+  const logoImg = document.createElement("img");
+  logoImg.src = "/media/tonrow-logo.png";
+  logoImg.alt = "Logo";
+  logoContainer.appendChild(logoImg);
+
+  // Append logo container to navigation
+  nav.appendChild(logoContainer);
+
+  // Create ul element for menu items
   const ul = document.createElement("ul");
   ul.id = "menuItems";
-  ul.style.textAlign = "right"; // Set text alignment to right
 
   // Array of menu items
   const menuItems = [
@@ -45,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "قوانین",
   ];
 
-  // Create list items and anchor tags dynamically
+  // Create list items and anchor tags dynamically for each menu item
   menuItems.forEach((item) => {
     const li = document.createElement("li");
     const a = document.createElement("a");
