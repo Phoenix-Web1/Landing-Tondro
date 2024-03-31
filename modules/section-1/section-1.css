@@ -51,7 +51,8 @@
   .subtract {
       position: absolute;
       width: 100%;
-      bottom: -12px;
+      /* bottom: -12px; */
+      bottom: -2%;
   }
 
   /* Styles for the first image (hero) */
@@ -71,8 +72,9 @@
   .hero-banner-background>img:nth-child(3) {
     /* background-color: #353535; */
     position: absolute;
-    left: 45%;
+    left: 40%;
     top: 85%;
+    box-shadow: 100px 100px 0px 0px #fff ;
   }
 
   /* Styles for shodow image */
