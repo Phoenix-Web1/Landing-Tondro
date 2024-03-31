@@ -2,13 +2,15 @@
 #mainHeader {
   background-color: #333; /* Background color */
   color: #fff; /* Text color */
-  padding: 10px 20px; /* Padding */
+  padding: 20px 40px; /* Padding */
   display: flex; /* Display as flexbox */
   justify-content: space-between; /* Align items with space between them */
   align-items: center; /* Center align items vertically */
-  position: sticky; /* Sticky positioning */
+  position: fixed; /* Sticky positioning */
   top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensuring it stays on top */
+  left: 0; /* Stick to the left */
+  right: 0; /* Stretch to the right */
+  z-index: 1000;
 }
 
 /* Styling for dynamic buttons */
@@ -126,10 +128,4 @@
   z-index: 1001; /* Ensure it covers the entire page including the header */
   display: none; /* Initially hidden */
   backdrop-filter: blur(2px); /* Apply blur effect */
-}
-/* Styling for the menu icon */
-#menuIcon {
-  fill: white; /* Icon color */
-  width: 24px; /* Icon width */
-  height: 24px; /* Icon height */
 }
