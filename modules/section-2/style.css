@@ -1,6 +1,12 @@
+@font-face {
+    font-family:IRANSans ;
+    src: url(font/IRANSansXV.woff);
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: IRANSans;
 }
 button{
     border-radius: 5px;
