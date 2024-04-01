@@ -1,3 +1,8 @@
+:root{
+    --black-text :#252736;
+    --gray-text:#353535;
+    --primary-color:#003D95;
+}
 @font-face {
     font-family: IRANSans;
     src: url(font/IRANSansXV.woff);
@@ -29,7 +34,7 @@ button {
 }
 
 .SEC-2>h1 {
-    color: #1F1F1F;
+    color: var(--black-text);
     font-size: 25px;
 }
 
@@ -43,7 +48,7 @@ button {
 
 .SEC-2>div:first-of-type>button {
     font-size: 15px;
-    color: #8C8C8C;
+    color: var(--gray-text);
     width: 45%;
     height: 50px;
     border: none;
@@ -51,7 +56,7 @@ button {
 }
 
 .SEC-2>div:first-of-type>.active-sec2 {
-    color: #003D95 !important;
+    color: var(--primary-color) !important;
     margin-bottom: 100pxs;
     border-bottom: 2px #DCDCDC solid;
 }
@@ -74,17 +79,17 @@ button {
 
 .SEC-2>div>div>h2 {
     font-size: 25px;
-    color: #1F1F1F;
+    color: var(--black-text);
 }
 
 .SEC-2>div>div>p {
     width: 80%;
-    color: #353535;
+    color: var(--gray-text);
 }
 
 .SEC-2>div>div>button {
     background-color: #fff;
-    color: #003D95;
+    color: var(--primary-color);
     width: 40%;
     height: 35px;
     display: flex;
