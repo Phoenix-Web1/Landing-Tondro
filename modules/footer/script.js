@@ -109,16 +109,28 @@ function createFooter() {
       div.appendChild(h2Div);
 
       part.links.forEach(function (link) {
-        // Create link elements
-        let a = document.createElement("a");
-        a.href = link.url;
-        a.textContent = link.text;
-        a.style.textDecoration = "none";
-        a.style.color = "inherit";
-        let linkDiv = document.createElement("div");
-        linkDiv.style.textAlign = "right";
-        linkDiv.appendChild(a);
-        div.appendChild(linkDiv);
+        // Exclude specific links on mobile
+        if (
+          !isMobile ||
+          (isMobile &&
+            link.text !== "دانلود اپ سفیر" &&
+            link.text !== "پشتیبانی" &&
+            link.text !== "قوانین و مقررات" &&
+            link.text !== "لوگو و هویت سفیر" &&
+            link.text !== "وبلاگ سفیر" &&
+            link.text !== "فرصت شغلی")
+        ) {
+          // Create link elements
+          let a = document.createElement("a");
+          a.href = link.url;
+          a.textContent = link.text;
+          a.style.textDecoration = "none";
+          a.style.color = "inherit";
+          let linkDiv = document.createElement("div");
+          linkDiv.style.textAlign = "right";
+          linkDiv.appendChild(a);
+          div.appendChild(linkDiv);
+        }
       });
     } else if (part.heading === "سفیر" && part.imageUrl && part.subtext) {
       // Create content for Part 5 with image and subtext
@@ -210,3 +222,34 @@ function createFooter() {
 
 // Call function to create footer
 createFooter();
+
+// Function to dynamically remove specified links on mobile
+function removeMobileLinks() {
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+  if (isMobile) {
+    const linksToRemove = [
+      "دانلود اپ سفیر",
+      "پشتیبانی",
+      "قوانین و مقررات",
+      "لوگو و هویت سفیر",
+      "وبلاگ سفیر",
+      "فرصت شغلی",
+    ];
+
+    linksToRemove.forEach((linkText) => {
+      let links = document.querySelectorAll(`#part2 a, #part3 a, #part4 a`);
+      links.forEach((link) => {
+        if (link.textContent === linkText) {
+          link.parentNode.remove(); // Remove the link's parent node
+        }
+      });
+    });
+  }
+}
+
+// Call function to remove links on initial page load
+removeMobileLinks();
+
+// Add event listener to dynamically remove links on window resize
+window.addEventListener("resize", removeMobileLinks);
