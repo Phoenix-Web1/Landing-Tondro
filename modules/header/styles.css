@@ -1,6 +1,6 @@
 /* Styling for the main header */
 #mainHeader {
-  background-color: #333; /* Background color */
+  background-color: #e0e0e0; /* Background color */
   color: #fff; /* Text color */
   padding: 20px 40px; /* Padding */
   display: flex; /* Display as flexbox */
@@ -94,27 +94,14 @@
 /* Styling for the logo container */
 .logo-container {
   display: flex; /* Display as flexbox */
-  flex-direction: column; /* Arrange items in column */
+  flex-direction: row-reverse; /* Arrange items in reverse row */
   align-items: center; /* Center align items */
   position: relative; /* Add position relative */
 }
 
 /* Styling for the logo image */
 .logo-container img {
-  margin-bottom: 5px; /* Adjust the space between the logo and the line */
-}
-
-/* Styling for the line below the logo */
-.logo-container::after {
-  content: ""; /* Empty content */
-  position: absolute; /* Absolute positioning */
-  bottom: 0; /* Stick to the bottom */
-  left: 14%; /* Position from left */
-  transform: translateX(-50%); /* Center horizontally */
-  width: 185px; /* Width */
-  height: 1px; /* Height */
-  background-color: #0000001c; /* Change color of the line */
-  top: 54px; /* Adjust position relative to logo */
+  margin-left: 10px; /* Adjust the space between the logo and the line */
 }
 
 /* Styling for the overlay */
@@ -128,4 +115,78 @@
   z-index: 1001; /* Ensure it covers the entire page including the header */
   display: none; /* Initially hidden */
   backdrop-filter: blur(2px); /* Apply blur effect */
+}
+/* Media query for desktop devices */
+@media only screen and (min-width: 768px) {
+  /* Styling adjustments for desktop devices */
+
+  #toggleNav {
+    display: none; /* Hide toggle button for desktop */
+  }
+
+  #mainNav {
+    display: flex; /* Display main navigation */
+    position: static; /* Reset position */
+    padding: 0; /* Reset padding */
+    background-color: transparent; /* Transparent background */
+    align-items: baseline; /* Align items at baseline */
+    border-radius: 0; /* Reset border radius */
+    flex-direction: row-reverse; /* Arrange items in a reverse row */
+  }
+
+  #menuItems {
+    display: flex; /* Display menu items as flexbox for desktop */
+    flex-direction: row-reverse; /* Arrange menu items in a reverse row */
+  }
+
+  #menuItems li {
+    margin: 0 20px; /* Margin between menu items */
+  }
+
+  #menuItems li a {
+    padding: 0; /* Remove padding for menu items */
+    font-size: 16px; /* Adjust font size for desktop */
+  }
+
+  .logo-container::after {
+    display: none; /* Hide the line below the logo for desktop */
+  }
+
+  /* Adjustments for desktop version */
+
+  /* Move the logo to the right */
+  .logo-container {
+    margin-left: auto; /* Align logo to the right */
+  }
+
+  /* Reset margin for the first list item */
+  #menuItems li:first-child {
+    margin-right: 20px; /* Add margin to the right of the first list item */
+  }
+
+  /* Hide the fifth list item */
+  #menuItems li:nth-child(5) {
+    display: none; /* Hide the fifth list item */
+  }
+
+  /* Styling for anchor tags within menu items */
+  #menuItems li a {
+    color: #8c8c8c; /* Change color for menu items */
+    text-decoration: none; /* No underline */
+    display: block; /* Display as block */
+    font-size: 16px; /* Font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  /* Adjust alignment for main header */
+  #mainHeader {
+    align-items: baseline; /* Align items at baseline */
+    padding: 2px 47px 35px 65px; /* Adjust padding */
+  }
+
+  /* Adjust font size and padding for dynamic buttons */
+  .dynamicButton {
+    font-size: 18px; /* Increase font size */
+    padding: 15px 57px; /* Adjust padding */
+  }
 }
