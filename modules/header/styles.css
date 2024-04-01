@@ -99,6 +99,17 @@
   position: relative; /* Add position relative */
 }
 
+.logo-container::after {
+  content: ""; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Stick to the bottom */
+  left: 14%; /* Position from left */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 185px; /* Width */
+  height: 1px; /* Height */
+  background-color: #0000001c; /* Change color of the line */
+  top: 54px; /* Adjust position relative to logo */
+}
 /* Styling for the logo image */
 .logo-container img {
   margin-left: 10px; /* Adjust the space between the logo and the line */
