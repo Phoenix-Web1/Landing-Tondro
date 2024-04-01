@@ -109,16 +109,28 @@ function createFooter() {
       div.appendChild(h2Div);
 
       part.links.forEach(function (link) {
-        // Create link elements
-        let a = document.createElement("a");
-        a.href = link.url;
-        a.textContent = link.text;
-        a.style.textDecoration = "none";
-        a.style.color = "inherit";
-        let linkDiv = document.createElement("div");
-        linkDiv.style.textAlign = "right";
-        linkDiv.appendChild(a);
-        div.appendChild(linkDiv);
+        // Exclude specific links on mobile
+        if (
+          !isMobile ||
+          (isMobile &&
+            link.text !== "دانلود اپ سفیر" &&
+            link.text !== "پشتیبانی" &&
+            link.text !== "قوانین و مقررات" &&
+            link.text !== "لوگو و هویت سفیر" &&
+            link.text !== "وبلاگ سفیر" &&
+            link.text !== "فرصت شغلی")
+        ) {
+          // Create link elements
+          let a = document.createElement("a");
+          a.href = link.url;
+          a.textContent = link.text;
+          a.style.textDecoration = "none";
+          a.style.color = "inherit";
+          let linkDiv = document.createElement("div");
+          linkDiv.style.textAlign = "right";
+          linkDiv.appendChild(a);
+          div.appendChild(linkDiv);
+        }
       });
     } else if (part.heading === "سفیر" && part.imageUrl && part.subtext) {
       // Create content for Part 5 with image and subtext
@@ -168,19 +180,18 @@ function createFooter() {
   imageBlock.classList.add("image-block"); // Add class for styling
 
   // Function to add image
-  function addImage(imageSrc, altText) {
+  function addImage(imageSrc, altText, isLarge = false) {
     let image = document.createElement("img");
     image.src = imageSrc;
     image.alt = altText;
-    image.style.marginLeft = "10px"; // Adjust as needed
-    image.style.height = "50px"; // Adjust as needed
+    image.style.marginLeft = "10px";
+    image.style.height = isLarge ? "120px" : "50px"; // Set larger height if isLarge is true
     imageBlock.appendChild(image);
   }
 
   // Adding images
-  addImage("image1-url.jpg", "Image 1");
-  addImage("image2-url.jpg", "Image 2");
-  addImage("image3-url.jpg", "Image 3");
+  addImage("/media/meliSabt.png", "نشان ملی ثبت(رسانه دیجیتال)", true); // Set the third argument to true for larger height
+  addImage("/media/namadElc.png", "نماد الکترونیک", true); // Set the third argument to true for larger height
   // Add more images if needed
 
   // Append footer content to footer
