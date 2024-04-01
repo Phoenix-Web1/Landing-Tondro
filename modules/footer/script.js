@@ -190,9 +190,8 @@ function createFooter() {
   }
 
   // Adding images
-  addImage("image1-url.jpg", "Image 1");
-  addImage("image2-url.jpg", "Image 2");
-  addImage("image3-url.jpg", "Image 3");
+  addImage("/media/meliSabt.png", "نشان ملی ثبت(رسانه دیجیتال)");
+  addImage("/media/namadElc.png", "نماد الکترونیک");
   // Add more images if needed
 
   // Append footer content to footer
