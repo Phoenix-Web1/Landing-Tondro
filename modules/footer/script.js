@@ -180,18 +180,18 @@ function createFooter() {
   imageBlock.classList.add("image-block"); // Add class for styling
 
   // Function to add image
-  function addImage(imageSrc, altText) {
+  function addImage(imageSrc, altText, isLarge = false) {
     let image = document.createElement("img");
     image.src = imageSrc;
     image.alt = altText;
-    image.style.marginLeft = "10px"; // Adjust as needed
-    image.style.height = "50px"; // Adjust as needed
+    image.style.marginLeft = "10px";
+    image.style.height = isLarge ? "120px" : "50px"; // Set larger height if isLarge is true
     imageBlock.appendChild(image);
   }
 
   // Adding images
-  addImage("/media/meliSabt.png", "نشان ملی ثبت(رسانه دیجیتال)");
-  addImage("/media/namadElc.png", "نماد الکترونیک");
+  addImage("/media/meliSabt.png", "نشان ملی ثبت(رسانه دیجیتال)", true); // Set the third argument to true for larger height
+  addImage("/media/namadElc.png", "نماد الکترونیک", true); // Set the third argument to true for larger height
   // Add more images if needed
 
   // Append footer content to footer
@@ -221,34 +221,3 @@ function createFooter() {
 
 // Call function to create footer
 createFooter();
-
-// Function to dynamically remove specified links on mobile
-function removeMobileLinks() {
-  const isMobile = window.matchMedia("(max-width: 600px)").matches;
-
-  if (isMobile) {
-    const linksToRemove = [
-      "دانلود اپ سفیر",
-      "پشتیبانی",
-      "قوانین و مقررات",
-      "لوگو و هویت سفیر",
-      "وبلاگ سفیر",
-      "فرصت شغلی",
-    ];
-
-    linksToRemove.forEach((linkText) => {
-      let links = document.querySelectorAll(`#part2 a, #part3 a, #part4 a`);
-      links.forEach((link) => {
-        if (link.textContent === linkText) {
-          link.parentNode.remove(); // Remove the link's parent node
-        }
-      });
-    });
-  }
-}
-
-// Call function to remove links on initial page load
-removeMobileLinks();
-
-// Add event listener to dynamically remove links on window resize
-window.addEventListener("resize", removeMobileLinks);
