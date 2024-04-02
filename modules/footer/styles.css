@@ -15,9 +15,7 @@
   margin-bottom: 20px; /* Add margin between parts */
   width: 15%;
 }
-#part1>div:first-of-type span{
-  
-}
+
 #footerContent h2,
 #footerContent span {
   line-height: 23px; /* Set line height for heading and text */
@@ -45,22 +43,35 @@
   #part1 {
     display: none;
   }
-  #footerContent{
+  #footerContent {
     flex-wrap: wrap; /* Allow items to wrap */
   }
   #footerContent > div {
     width: 40%;
   }
-  #part2{
+  #part2 {
     order: -2;
   }
-  #part3{
+  #part3 {
     order: 1;
   }
-  #part4{
+  #part4 {
     order: 0;
   }
-  #part5{
+  #part5 {
     order: -2;
+  }
+}
+/* Media query for 1000 pixels width */
+@media only screen and (max-width: 1000px) {
+  #footerContent > #part1 {
+    width: 25%; /* Set width for Part 1 at 1000 pixels */
+  }
+}
+
+/* Media query for 600 pixels width */
+@media only screen and (max-width: 600px) {
+  #footerContent > #part1 {
+    width: 40%; /* Set width for Part 1 at 600 pixels */
   }
 }
