@@ -8,12 +8,12 @@
 
 #footerContent {
   display: flex; /* Use flexbox for footer content */
-  gap: 5%;
+  gap: 5%; /* Set gap between child elements */
 }
 
 #footerContent > div {
   margin-bottom: 20px; /* Add margin between parts */
-  width: 15%;
+  width: 15%; /* Set width for each part */
 }
 
 #footerContent h2,
@@ -41,27 +41,32 @@
 @media only screen and (max-width: 600px) {
   /* Set the order of part3 and part5 to swap their positions */
   #part1 {
-    display: none;
+    display: none; /* Hide part1 on mobile */
   }
   #footerContent {
     flex-wrap: wrap; /* Allow items to wrap */
   }
   #footerContent > div {
-    width: 40%;
+    width: 40%; /* Set width for each part on mobile */
   }
   #part2 {
-    order: -2;
+    order: -2; /* Set order for part2 */
   }
   #part3 {
-    order: 1;
+    order: 1; /* Set order for part3 */
   }
   #part4 {
-    order: 0;
+    order: 0; /* Set order for part4 */
   }
   #part5 {
-    order: -2;
+    order: -2; /* Set order for part5 */
+  }
+  /* Center align images in the footer block for mobile */
+  .image-block {
+    justify-content: center; /* Center align images */
   }
 }
+
 /* Media query for 1000 pixels width */
 @media only screen and (max-width: 1000px) {
   #footerContent > #part1 {
