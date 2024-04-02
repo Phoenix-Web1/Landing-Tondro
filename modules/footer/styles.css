@@ -2,21 +2,22 @@
 #flexibleFooter {
   background-color: #1f1f1f; /* Set background color for footer */
   color: #fff; /* Set text color for footer */
-  padding: 2px 20px 20px 20px; /* Set padding for footer */
+  padding: 20px 20px 20px 20px; /* Set padding for footer */
   text-align: center; /* Align text to center */
 }
 
 #footerContent {
   display: flex; /* Use flexbox for footer content */
-  flex-wrap: wrap; /* Allow items to wrap */
-  gap: 10%;
+  gap: 5%;
 }
 
 #footerContent > div {
-  flex: 1; /* Distribute available space equally */
   margin-bottom: 20px; /* Add margin between parts */
+  width: 15%;
 }
-
+#part1>div:first-of-type span{
+  
+}
 #footerContent h2,
 #footerContent span {
   line-height: 23px; /* Set line height for heading and text */
@@ -41,34 +42,25 @@
 /* Media query for mobile responsiveness */
 @media only screen and (max-width: 600px) {
   /* Set the order of part3 and part5 to swap their positions */
-  #part3 {
-    width: 48%;
-  }
-  #part4{
-    width: 48%;
-  }
-  #part5 , #part5 *{
-    width: 48%;
-    text-align: center !important;
-  }
-  #part2{
-    width: 48%;
-  }
   #part1 {
     display: none;
   }
-
-
-
-  /* Adjustments for parts 3 and 4 */
-  #footerContent > div:nth-child(3), /* Select the third child div */
-  #footerContent > div:nth-child(4) {
-    /* Select the fourth child div */
-    width: 50%; /* Set width to 50% for each */
-    float: left; /* Float elements to the left */
+  #footerContent{
+    flex-wrap: wrap; /* Allow items to wrap */
   }
-
-  #footerContent > div:nth-child(4) {
-    float: right; /* Float part 4 to the right */
+  #footerContent > div {
+    width: 40%;
+  }
+  #part2{
+    order: -2;
+  }
+  #part3{
+    order: 1;
+  }
+  #part4{
+    order: 0;
+  }
+  #part5{
+    order: -2;
   }
 }
