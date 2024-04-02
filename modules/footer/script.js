@@ -56,7 +56,7 @@ function createFooter() {
     {
       id: "part5",
       heading: "سفیر", // Changed Part 5 title to "سفیر"
-      imageUrl: "your-image-url.jpg", // Add image URL for part 5
+      imageUrl: "/media/tonrow.png", // Add image URL for part 5
       subtext: "حمل و نقل با ما، آسودگی خاطر برای شما!", // Add subtext for part 5
     }, // Add imageUrl and subtext for Part 5
   ];
@@ -138,13 +138,14 @@ function createFooter() {
       imageTitleContainer.style.display = "flex";
       imageTitleContainer.style.alignItems = "center"; // Align items vertically
       imageTitleContainer.style.justifyContent = "flex-end"; // Align items to the end
+      imageTitleContainer.style.flexDirection = "row-reverse";
 
       // Create image element
       let image = document.createElement("img");
       image.src = part.imageUrl; // Set image source
       image.alt = part.heading;
-      image.style.marginLeft = "10px"; // Add margin to separate from text
-      image.style.height = "30px"; // Adjust height as needed
+      image.style.marginLeft = "4px"; // Add margin to separate from text
+      image.style.height = "20px"; // Adjust height as needed
       imageTitleContainer.appendChild(image);
 
       // Create title element
