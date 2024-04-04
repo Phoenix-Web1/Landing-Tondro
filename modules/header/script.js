@@ -8,24 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return dynamicButton; // Return the created button
   }
 
-  // Function to create menu icon
-  function createMenuIcon() {
-    const menuIcon = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg"
-    );
-    menuIcon.setAttribute("id", "menuIcon");
-    menuIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    menuIcon.setAttribute("width", "24");
-    menuIcon.setAttribute("height", "24");
-    menuIcon.setAttribute("viewBox", "0 0 24 24");
-    menuIcon.innerHTML = `
-      <path fill="white" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-      <path d="M0 0h24v24H0z" fill="none"/>
-    `;
-    return menuIcon;
-  }
-
   // Create header element
   const header = document.createElement("header");
   header.id = "mainHeader"; // Set header ID
@@ -38,8 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleNavButton = document.createElement("button");
   toggleNavButton.id = "toggleNav"; // Set button ID
 
-  // Append SVG icon to toggle button
-  toggleNavButton.appendChild(createMenuIcon()); // Append SVG icon to toggle button
+  // Create image element for the menu icon
+  const menuIconImg = document.createElement("img");
+  menuIconImg.src = "/media/menu.png"; // Set image source
+  menuIconImg.alt = "Menu"; // Set alt text for accessibility
+  menuIconImg.style.backgroundColor = "transparent"; // Set background color to transparent
+  toggleNavButton.appendChild(menuIconImg); // Append image to toggle button
 
   // Append toggle button to header
   header.appendChild(toggleNavButton); // Append toggle button to header
