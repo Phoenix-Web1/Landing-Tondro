@@ -1,3 +1,4 @@
-function createDynamicElement () {
+function createDynamicElement (tagName,attributes,textContent,children) {
+    
     
 }
