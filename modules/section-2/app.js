@@ -1,57 +1,79 @@
-// html contener [start]
-function htmlContenerSEC2Genretor() {
-    // crete Contener
-    let contenerSEC2 = document.querySelector("body").appendChild(document.createElement("section"))
-    // get class for contenerSEC2
-    contenerSEC2.setAttribute("class", "SEC-2")
+// HTML container generator [start]
+function htmlContainerSEC2Generator() {
+  // create container
+  let containerSEC2 = document.createElement("section");
+  // get class for containerSEC2
+  containerSEC2.setAttribute("class", "SEC-2");
 
-    // genrate title SEC2
-    let titleSEC2 = document.querySelector(".SEC-2").appendChild(document.createElement("h1"))
-    // add text in title
-    titleSEC2.innerText = "تنرو , چه خدماتی ارائه میدهد؟ "
+  // generate title for SEC2
+  let titleSEC2 = document.createElement("h1");
+  // add text to title
+  titleSEC2.innerText = "تنرو , چه خدماتی ارائه میدهد؟";
+
+  // append title to container
+  containerSEC2.appendChild(titleSEC2);
+
+  // append container to body
+  document.body.appendChild(containerSEC2);
 }
-htmlContenerSEC2Genretor()
-// html contener [end]
+htmlContainerSEC2Generator();
+// HTML container generator [end]
 
 // create bodySEC2 [start]
-function BodySEC2Genretore() {
-    // You can enter all the content you want to be created inside this and it will create a new section for you inside the second section
-    let contentBodySEC2 = [
-        {
-            headName: "1درخواست خرید",
-            imgUrl: "img/thumbnail & headertext.png",
-            titleNameBody: "ارسال خرید",
-            Ptext: "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمان بخرید.",
-            btnText: "درخواست خرید",
-        },
-        {
-            headName: "2درخواست خرید",
-            imgUrl: "img/thumbnail & headertext.png",
-            titleNameBody: "ارسال خرید",
-            Ptext: "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمان بخرید.",
-            btnText: "درخواست خرید",
-        },
-    ];
-    contentBodySEC2.forEach(element => {
-        console.log(element);
-        for (let index = 0; index < 1; index++) {
-            console.log(element);
-            
-        }
+function bodySEC2Generator() {
+  let contentBodySEC2 = [
+    {
+      headName: "1درخواست خرید",
+      imgUrl: "img/thumbnail & headertext.png",
+      titleNameBody: "ارسال خر2ید",
+      Ptext:
+        "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمان بخرید.",
+      btnText: "درخواست خرید",
+    },
+    {
+      headName: "2درخواست خرید",
+      imgUrl: "img/thumbnail & headertext.png",
+      titleNameBody: "ارسال خری1د",
+      Ptext:
+        "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمان بخرید.",
+      btnText: "درخواست خرید",
+    },
+  ];
+
+  // Get the main section
+  const mainSection = document.querySelector(".mainSec");
+
+  // Function to update main section content
+  function updateMainSectionContent(index) {
+    const content = contentBodySEC2[index];
+    mainSection.innerHTML = `
+        <img src="${content.imgUrl}" />
+        <div>
+          <h2>${content.titleNameBody}</h2>
+          <p>${content.Ptext}</p>
+          <button>${content.btnText}</button>
+        </div>
+      `;
+  }
+
+  // loop through each content and generate HTML and event listeners
+  contentBodySEC2.forEach((content, index) => {
+    // create button for headers
+    let headerButton = document.createElement("button");
+    headerButton.innerText = content.headName;
+    headerButton.classList.add("header-btn");
+
+    // add event listener to button
+    headerButton.addEventListener("click", () => {
+      updateMainSectionContent(index);
     });
-    /*
-     // create title body SEC2 [start]
-     function genreteHeadBodySEC2(contenteSEC2){
-         // craete continer div for head body
-         let btnHead = document.querySelector(".SEC-2").appendChild(document.createElement("div"))
-         // create btn body head
-         let btnBodyHead = ""
-         // add contente head body
-         btnHead.document.appendChild(btnBodyHead)
-     }
-     genreteHeadBodySEC2(contentBodySEC2)
-     // create title body SEC2 [end] 
-     */
+
+    // append header button to headers div
+    document.querySelector(".headers").appendChild(headerButton);
+  });
+
+  // Show the content of the first item by default
+  updateMainSectionContent(0);
 }
-BodySEC2Genretore()
-// create bodySEC2 [END]
+bodySEC2Generator();
+// create bodySEC2 [end]
