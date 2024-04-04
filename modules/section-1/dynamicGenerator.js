@@ -31,4 +31,9 @@ function createDynamicElement(tagName, attributes, textContent, children) {
       return element;
 }
 
-let section = createDynamicElement('section',{id: "hero-banner-section"} , [] )
+let section = createDynamicElement('section',{id: "hero-banner-section"} , [
+    
+    createDynamicElement('div',{id :'hero-banner-container'},null,[
+        
+    ])
+] )
