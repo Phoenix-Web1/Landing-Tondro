@@ -15,7 +15,7 @@ function createDynamicElement(tagName, attributes, textContent, children) {
         element.appendChild(textNode);
     }
 
-    
+
     if (children) {
         for (var i = 0; i < children.length; i++) {
           var child = children[i];
@@ -28,4 +28,5 @@ function createDynamicElement(tagName, attributes, textContent, children) {
         }
       }
 
+      return element;
 }
