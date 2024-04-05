@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 70px 0;
 }
 
 .social-section p{
