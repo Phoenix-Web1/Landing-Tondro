@@ -8,10 +8,10 @@ export function createSection6() {
     containerSEC6.innerHTML = `
       <p>راه های ارتباطی با ما</p>
       <div>
-          <img src="image/whatsApp.png" alt="">
-          <img src="image/telegram.png" alt="">
-          <img src="image/facebook.png" alt="">
-          <img src="image/instagram.png" alt="">
+          <img src="media/whatsApp.png" alt="">
+          <img src="media/telegram.png" alt="">
+          <img src="media/facebook.png" alt="">
+          <img src="media/instagram.png" alt="">
       </div>
     `;
   }
