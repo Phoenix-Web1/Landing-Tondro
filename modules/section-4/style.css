@@ -30,5 +30,11 @@
     .map-cart{
         text-align: center;
     }
+
+    .map-cart .card-title{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
     
 }
