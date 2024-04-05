@@ -18,6 +18,9 @@ function createScrollingContainer() {
     { url: '/media/brand2.png', link: 'image2_link', alt: 'Image 2' },
     { url: '/media/brand3.png', link: 'image3_link', alt: 'Image 3' },
     { url: '/media/brand4.png', link: 'image4_link', alt: 'Image 4' },
+    { url: '/media/brand5.png', link: 'image4_link', alt: 'Image 4' },
+    { url: '/media/brand6.png', link: 'image4_link', alt: 'Image 4' },
+    { url: '/media/brand7.png', link: 'image4_link', alt: 'Image 4' },
   ];
 
   // Append images to content container

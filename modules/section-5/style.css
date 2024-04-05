@@ -9,7 +9,7 @@
   .scroll-container {
     overflow-x: scroll; /* Use scroll to allow for touch scrolling */
     white-space: nowrap; /* Prevent wrapping of content */
-    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on mobile */
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
   }
 
   /* Hide scrollbar for mobile devices */
@@ -28,9 +28,19 @@
   .scroll-content a {
     flex: 0 0 auto; /* Allow links to shrink or grow as needed */
     margin-right: 10px; /* Add margin between each link (adjust as needed) */
-    width: calc(100% / 3 - 10px); /* Adjust width to fit three images with margin */
-    max-width: calc(100% / 3 - 10px); /* Adjust max-width to fit three images with margin */
+    width: calc(
+      100% / 3 - 10px
+    ); /* Adjust width to fit three images with margin */
+    max-width: calc(
+      100% / 3 - 10px
+    ); /* Adjust max-width to fit three images with margin */
     display: block; /* Ensure each link takes full width */
+    filter: grayscale(100%); /* Initially grayscale */
+  }
+
+  /* Change filter to revert grayscale on hover */
+  .scroll-content a:hover {
+    filter: none; /* Revert grayscale on hover */
   }
 
   /* Style images within the content */
