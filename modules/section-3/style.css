@@ -3,6 +3,10 @@
   flex-direction: column;
   gap: 40px;
   text-align: center;
+  margin: 0 auto 70px auto;
+}
+.SEC-3>h1{
+  font-size: 40px;
 }
 .body-SEC-3 {
   display: flex;
@@ -39,6 +43,12 @@
   color: var(--gray-text);
 }
 @media screen and (max-width: 950px) {
+  .SEC-3{
+    margin: 0 auto 70px auto;
+  }
+  .SEC-3>h1{
+    font-size: 25px;
+  }
   .body-SEC-3 {
     align-items: center;
     justify-content: center;
