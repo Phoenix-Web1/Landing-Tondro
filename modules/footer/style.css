@@ -81,3 +81,32 @@
     width: 40%; /* Set width for Part 1 at 600 pixels */
   }
 }
+/* Media query for screens between 600px and 986px */
+@media only screen and (min-width: 600px) and (max-width: 986px) {
+  /* Set the order of part3 and part5 to swap their positions */
+  #part1 {
+    display: none; /* Hide part1 on mobile */
+  }
+  #footerContent {
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+  #footerContent > div {
+    width: 40%; /* Set width for each part on mobile */
+  }
+  #part2 {
+    order: -2; /* Set order for part2 */
+  }
+  #part3 {
+    order: 1; /* Set order for part3 */
+  }
+  #part4 {
+    order: 0; /* Set order for part4 */
+  }
+  #part5 {
+    order: -2; /* Set order for part5 */
+  }
+  /* Center align images in the footer block for mobile */
+  .image-block {
+    justify-content: center; /* Center align images */
+  }
+}
