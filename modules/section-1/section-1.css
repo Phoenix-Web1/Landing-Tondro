@@ -117,7 +117,7 @@
   }
 
   /* Styles for the hero button */
-  .hero-description button {
+  button {
       width: 172px;
       height: 43px;
       margin-top: 5%;
@@ -126,6 +126,12 @@
       border: none;
       border-radius: 5px;
       font-size: 14px;
+      transition-property: background-color;
+      transition-duration: .3s;
+  }
+
+  button:focus {
+    background-color: #2B6FBD;
   }
 
   .guide-flash {
@@ -142,8 +148,9 @@
           /* flex-wrap: wrap; */
           position: relative;
       }
-      .hero-banner-container{
-        overflow: visible;
+
+      .hero-banner-container {
+          overflow: visible;
       }
 
       .hero-description {
@@ -178,8 +185,8 @@
           bottom: -19%;
       }
 
-      .guide-flash{
-        display: none;
+      .guide-flash {
+          display: none;
       }
   }
 
