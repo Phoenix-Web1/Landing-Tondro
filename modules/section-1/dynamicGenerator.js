@@ -22,6 +22,9 @@ function createDynamicElement(tagName, attributes, textContent, children) {
   return element;
 }
 
+
+
+
 // create section1
 var section = createDynamicElement("section", { id: "hero-banner-section" }, null, [
 
