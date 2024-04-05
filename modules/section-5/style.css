@@ -1,27 +1,51 @@
-/* Set overflow behavior to allow horizontal scrolling */
+/* Default styles */
 .scroll-container {
-  overflow-x: auto;
-  white-space: nowrap; /* Prevent wrapping of content */
+  overflow-x: auto; /* Use default scroll behavior */
 }
 
-/* Display scroll wrapper as inline-block to allow for scrolling */
-.scroll-wrapper {
-  display: inline-block;
-}
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Hide default scrollbar and ensure smooth scrolling */
+  .scroll-container {
+    overflow-x: scroll; /* Use scroll to allow for touch scrolling */
+    white-space: nowrap; /* Prevent wrapping of content */
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+  }
 
-/* Set content container to flex display for flexible layout */
-.scroll-content {
-  display: flex;
-}
+  /* Hide scrollbar for mobile devices */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
 
-/* Style individual links within the content */
-.scroll-content a {
-  flex: 0 0 auto; /* Allow links to shrink or grow as needed */
-  margin-right: 10px; /* Add margin between each link (adjust as needed) */
-}
+  /* Set content container to flex display for flexible layout */
+  .scroll-content {
+    display: flex;
+    transition: transform 0.3s ease; /* Add smooth transition */
+    font-size: 0; /* Remove white space between images */
+  }
 
-/* Style images within the content */
-.scroll-content img {
-  max-width: 100%; /* Ensure images don't exceed container width */
-  height: auto; /* Maintain aspect ratio */
+  /* Style individual links within the content */
+  .scroll-content a {
+    flex: 0 0 auto; /* Allow links to shrink or grow as needed */
+    margin-right: 10px; /* Add margin between each link (adjust as needed) */
+    width: calc(
+      100% / 3 - 10px
+    ); /* Adjust width to fit three images with margin */
+    max-width: calc(
+      100% / 3 - 10px
+    ); /* Adjust max-width to fit three images with margin */
+    display: block; /* Ensure each link takes full width */
+    filter: grayscale(100%); /* Initially grayscale */
+  }
+
+  /* Change filter to revert grayscale on hover */
+  .scroll-content a:hover {
+    filter: none; /* Revert grayscale on hover */
+  }
+
+  /* Style images within the content */
+  .scroll-content img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
