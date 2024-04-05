@@ -1,0 +1,200 @@
+  /* Define the custom font */
+  @font-face {
+      font-family: IRANSans;
+      src: url(./font/IRANSansXV.woff);
+  }
+
+  /* Define the root variables for colors */
+  :root {
+      --title-color: #353535;
+      --text-color: #787878;
+      --btn-text-color: #ECECEC;
+      --btn-backgroundcolor: #003D95;
+  }
+
+  /* Apply the custom font to all elements */
+  * {
+      font-family: IRANSans;
+  }
+
+  /* Styles for the hero banner section */
+  #hero-banner-section {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1300px;
+  }
+
+  /* Styles for the hero banner container */
+  .hero-banner-container {
+      margin: 0 auto;
+      padding-top: 12%;
+      position: relative;
+      /* overflow: hidden; */
+      height: 320px;
+      max-width: 375px;
+      width: 100%;
+  }
+
+  /* Styles for the hero banner background */
+  .hero-banner-background {
+      background-color: #6168FF;
+      width: 92%;
+      height: 90%;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 15%;
+  }
+
+  /* Styles for the subtract element */
+  .subtract {
+      position: absolute;
+      width: 100%;
+      /* bottom: -12px; */
+      bottom: -2%;
+  }
+
+  .subtract-des {
+      display: none;
+  }
+
+  /* Styles for the first image (hero) */
+  .hero-banner-background>img:nth-child(1) {
+      position: absolute;
+      top: -40px;
+      width: 295px;
+  }
+
+  /* Styles for the second image (logo) */
+  .hero-banner-background>img:nth-child(2) {
+      position: absolute;
+      right: 10%;
+      top: -20px;
+  }
+
+
+    /* down arrow */
+  .hero-banner-background>img:nth-child(3) {
+      /* background-color: #353535; */
+      position: absolute;
+      left: 40%;
+      top: 85%;
+      box-shadow: 100px 100px 0px 0px #fff;
+  }
+
+  /* Styles for shodow image */
+  .hero-banner-background>img:nth-child(4) {
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  /* Styles for the hero description */
+  .hero-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -35px;
+      z-index: 1;
+      /* background-color: #003D95; */
+  }
+
+  /* Center align the text elements within the hero description */
+  .hero-description * {
+      text-align: center;
+  }
+
+  /* Styles for the hero title */
+  .hero-description h1 {
+      font-size: 40px;
+      color: var(--title-color);
+      margin: 0;
+  }
+
+  /* Styles for the hero subtitle */
+  .hero-description span {
+      font-size: 14px;
+      color: var(--text-color);
+  }
+
+  /* Styles for the hero button */
+  .hero-description  button {
+      width: 172px;
+      height: 43px;
+      margin-top: 5%;
+      color: var(--btn-text-color);
+      background-color: var(--btn-backgroundcolor);
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      /* margin-bottom: 10%; */
+      transition-property: background-color;
+      transition-duration: .3s;
+  }
+
+  button:focus {
+    background-color: #2B6FBD;
+  }
+
+  .guide-flash {
+      width: 15%;
+      margin: 0 auto;
+      margin-top: 20%;
+  }
+
+
+  @media only screen and (min-width: 1000px) {
+
+      #hero-banner-section {
+          flex-direction: row;
+          /* flex-wrap: wrap; */
+          position: relative;
+          margin-top: 46px;
+      }
+
+      .hero-banner-container {
+          overflow: visible;
+      }
+
+      .hero-description {
+          align-items: end;
+          /* margin: 0 5%; */
+          margin-right: 7%;
+      }
+
+      .hero-description * {
+          direction: rtl;
+          text-align: right;
+      }
+
+      /* title */
+      .hero-description h1 {
+
+          margin: 10% 0;
+      }
+
+      .hero-description span {
+          max-width: 400px;
+      }
+
+      .hero-description button {
+          text-align: center;
+      }
+
+      .subtract-des {
+          display: block;
+          width: 100%;
+          position: absolute;
+          bottom: -125px;
+          max-width: 1250px;
+      }
+
+      .guide-flash {
+          display: none;
+      }
+      .hero-banner-background>img:nth-child(3){
+        display: none;
+      }
+  }

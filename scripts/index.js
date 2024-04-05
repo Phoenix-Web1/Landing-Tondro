@@ -1,6 +1,9 @@
 // index.js
 
 import { createHeader, createDynamicButton } from "/modules/header/header.js";
+// index.js
+
+import { createSection1 } from "/modules/section-1/section-1.js";
 import { createSection2 } from "/modules/section-2/section-2.js";
 import { createSection3 } from "/modules/section-3/section-3.js";
 import { createSection4 } from "/modules/section-4/section-4.js";
@@ -14,6 +17,7 @@ const dynamicButton = createDynamicButton("My Dynamic Button");
 
 createHeader();
 // Call createSection2 function to generate section-2
+createSection1();
 createSection2();
 
 // Call createSection3 function to generate section-3
