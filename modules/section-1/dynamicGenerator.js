@@ -40,7 +40,7 @@ let section = createDynamicElement('section',{id: "hero-banner-section"} , [
         createDynamicElement("img", { src: "section-1-images/hero.png", alt: "Hero Image" }),
         createDynamicElement("img", { src: "section-1-images/Logotype.png", alt: "Logotype Image" }),
         createDynamicElement("img", { src: "section-1-images/arrow.svg", alt: "" }),
-
+        createDynamicElement("img", { src: "section-1-images/shadow.png", alt: "" })
       ])
     ])
 ])
