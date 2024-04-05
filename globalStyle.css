@@ -1,0 +1,85 @@
+/* add defalt css [start] */
+@font-face {
+    font-family: iransans;
+    src: url(font/IRANSansXV.woff);
+}
+*{
+    font-family: iransans ;
+}
+
+@font-face {
+    font-family: iransans;
+    src: url(font/IRANSansXV.woff);
+}
+
+:root {
+    --title-color: #353535;
+    --text-color: #787878;
+    --btn-text-color: #ECECEC;
+    --btn-backgroundcolor: #003D95;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: IRANSans;
+  }
+  h1,
+  h2 {
+    color: var(--black-text);
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  :root {
+    --black-text: #252736;
+    --gray-text: #353535;
+    --primary-color: #003d95;
+  }
+  @font-face {
+    font-family: IRANSans;
+    src: url(/font/IRANSansXV.woff);
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  :root {
+    --black-text: #252736;
+    --gray-text: #353535;
+    --primary-color: #003d95;
+  }
+  
+  @font-face {
+    font-family: IRANSans;
+    src: url(font/IRANSansXV.woff);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: IRANSans;
+  }
+  
+  button {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  :root {
+    --black-text: #252736;
+    --gray-text: #353535;
+    --primary-color: #003d95;
+  }
+  
+  @font-face {
+    font-family: IRANSans;
+    src: url(/font/IRANSansXV.woff);
+  }
+  *{
+    font-family: IRANSans ;
+  }
+  /* add defalt css [end] */

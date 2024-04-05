@@ -13,22 +13,22 @@ export function createSection3() {
   // create content object
   let contentBodySEC3 = [
       {
-          imgUrl: "img/imgitm-body-SEC31.png",
+          imgUrl: "media/imgitm-body-SEC31.png",
           titleItms: "همیشه در دسترس",
           Pitms: "پشتیبانی 24 ساعته همکاران ما در تنرو",
       },
       {
-          imgUrl: "img/imgitm-body-SEC32.png",
+          imgUrl: "media/imgitm-body-SEC32.png",
           titleItms: "به صرفه",
           Pitms: " ارزان ترین فروشگاه های ممکن نزدیک به شما",
       },
       {
-          imgUrl: "img/imgitm-body-SEC33.png",
+          imgUrl: "media/imgitm-body-SEC33.png",
           titleItms: " حداکثر سرعت",
           Pitms: " تحویل کالا در کم ترین زمان ممکن برای شما",
       },
       {
-          imgUrl: "img/imgitm-body-SEC34.png",
+          imgUrl: "media/imgitm-body-SEC34.png",
           titleItms: " کیفیت بالا    ",
           Pitms: "بهترین کیفیت ممکن که فکرش هم می کنید.",
       },

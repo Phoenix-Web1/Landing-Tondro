@@ -28,7 +28,7 @@ export function createSection2() {
   let contentBodySEC2 = [
     {
       headName: "درخواست سفیر",
-      imgUrl: "img/thumbnail & headertext2.png",
+      imgUrl: "media/thumbnail & headertext2.png",
       titleNameBody: "درخواست سفیر",
       Ptext:
         " با درخواست سفیر خیل راحت بسته های خود را جابجا کنید و برای دیگر کارهایتن زمان بزارید.",
@@ -36,7 +36,7 @@ export function createSection2() {
     },
     {
       headName: "درخواست خرید",
-      imgUrl: "img/thumbnail & headertext.png",
+      imgUrl: "media/thumbnail & headertext.png",
       titleNameBody: "ارسال خرید",
       Ptext:
         "میتوانید برای سازمان یا منزل شخصی خود فقط با مشخص کردن مبدا و مقصد و ارسال لیست های خرید خود, کارها را با سرعت بیشتری انجام دهید و برای دیگر کار هایتان زمان بخرید.",
@@ -88,7 +88,7 @@ export function createSection2() {
   mmdi.setAttribute("class", "active-sec2");
 
   let flashGuide = document.createElement("img");
-  flashGuide.setAttribute("src", "img/Vector 4.svg");
+  flashGuide.setAttribute("src", "media/Vector 4.svg");
   flashGuide.setAttribute("class", "flashGuide");
   containerSEC2.appendChild(flashGuide);
 }
