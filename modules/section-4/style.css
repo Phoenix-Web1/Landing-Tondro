@@ -46,8 +46,20 @@
     }
 
     .map-cart .card-des{
-        font-size: 24px;
-        margin: 10%;
+        font-size: 20px;
+        margin: 5%;
+        font-weight: 500;
+    }
+    
+     button {
+        width: 172px;
+        height: 43px;
+        margin-top: 5%;
+        color: var(--btn-text-color);
+        background-color: var(--btn-backgroundcolor);
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
     }
     
 }
