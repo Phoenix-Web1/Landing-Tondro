@@ -151,6 +151,7 @@
           flex-direction: row;
           /* flex-wrap: wrap; */
           position: relative;
+          margin-top: 46px;
       }
 
       .hero-banner-container {
