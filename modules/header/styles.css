@@ -97,7 +97,8 @@
   text-decoration: none; /* No underline */
   padding: 10px 20px; /* Padding */
   display: block; /* Display as block */
-  font-size: 22px; /* Font size */
+  font-size: 20px; /* Font size */
+  font-weight: 500;
 }
 #menuItems li a:hover{
   color: var(--primary-color);
