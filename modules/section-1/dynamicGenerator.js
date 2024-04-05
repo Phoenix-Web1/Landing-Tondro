@@ -23,9 +23,13 @@ function createDynamicElement(tagName, attributes, textContent, children) {
 }
 
 // create section1
-// create section1
 var section = createDynamicElement("section", { id: "hero-banner-section" }, null, [
+
+  // create section1 container
+  // start of section1 container
   createDynamicElement("div", { class: "hero-banner-container" }, null, [
+    // create hero-banner-background
+    // start of banner background
     createDynamicElement("div", { class: "hero-banner-background" }, null, [
       createDynamicElement("img", { src: "section-1-images/hero.png", alt: "Hero Image" }),
       createDynamicElement("img", { src: "section-1-images/Logotype.png", alt: "Logotype Image" }),
@@ -34,6 +38,8 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
     ]),
     createDynamicElement("img", { class: "subtract", src: "section-1-images/Subtract (1).png", alt: "Subtract Image" })
   ]),
+   // end of section1 container
+  //  ------------------------
   createDynamicElement("div", { class: "hero-description" }, null, [
     createDynamicElement("h1", null, "سامانه تنرو"),
     createDynamicElement("span", null, "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"),
