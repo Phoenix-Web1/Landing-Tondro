@@ -82,3 +82,9 @@ contentBodySEC2.forEach((content, index) => {
 
 let mmdi = document.querySelector(".header-btn:last-of-type");
 mmdi.setAttribute("class", "active-sec2");
+
+
+let  flashGuide = document.createElement('img')
+flashGuide.setAttribute('src','img/Vector 4.svg')
+flashGuide.setAttribute('class','flashGuide')
+containerSEC2.appendChild(flashGuide)

@@ -177,6 +177,10 @@
           position: absolute;
           bottom: -19%;
       }
+
+      .guide-flash{
+        display: none;
+      }
   }
 
 
