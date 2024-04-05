@@ -32,7 +32,7 @@ function createDynamicElement(tagName, attributes, textContent, children) {
 }
 
 // create section1
-let section = createDynamicElement('section',{id: "hero-banner-section"} , [
+let section1 = createDynamicElement('section',{id: "hero-banner-section"} , [
     
   // create section1 container
     createDynamicElement('div',{id :'hero-banner-container'},null,[
@@ -54,4 +54,6 @@ let section = createDynamicElement('section',{id: "hero-banner-section"} , [
     createDynamicElement("img", { class: "guide-flash", src: "section-1-images/Vector 4.svg", alt: "" })
  
 ])
+
+document.body.appendChild(section1);
 
