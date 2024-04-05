@@ -35,6 +35,9 @@
         font-size: 40px;
         font-weight: bold;
     }
-    
+
+    .map-cart .card-des{
+        font-size: 24px;
+    }
     
 }
