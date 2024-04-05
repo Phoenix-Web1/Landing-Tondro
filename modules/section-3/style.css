@@ -1,16 +1,19 @@
 /* add defalt css [start] */
-*{
-    margin: 0;
-    padding: 0;
-    font-family:IRANSans ;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: IRANSans;
 }
-h1,h2{
-    color: var(--black-text);
+h1,
+h2 {
+  color: var(--black-text);
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: #FEFEFE;
+  background-color: #fefefe;
 }
 :root {
   --black-text: #252736;
@@ -22,35 +25,63 @@ body {
   src: url(/font/IRANSansXV.woff);
 }
 /* add defalt css [end] */
-.SEC-3{
-    display:flex;
-    flex-direction: column;
-    gap: 40px;
-    text-align: center;
+.SEC-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
 }
-.body-SEC-3{
-    display: flex;
-    margin: 0 auto;
-    width: 90%;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.body-SEC-3 {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-.itm-SEC3{
-    display: flex;
+.itm-SEC3 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: right;
+  width: 45%;
+  direction: rtl;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 34px rgba(197, 72, 241, 0.08);
+}
+.itm-SEC3 > h1 {
+  font-size: 40px;
+}
+.itm-SEC3 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.itm-SEC3 > div > h2 {
+  font-size: 20px;
+}
+.itm-SEC3 > div > p {
+  font-size: 14px;
+  text-align: right;
+  color: var(--gray-text);
+}
+@media screen and (max-width: 950px) {
+  .body-SEC-3 {
     align-items: center;
-    justify-content: right;
-    width: 45%;
-    direction: rtl;
-    background-color: #FFFFFF;
-    box-shadow: 0px 8px 34px rgba(197, 72, 241, 0.08);
-}
-.itm-SEC3>div{
-    display: flex;
+    justify-content: center;
+  }
+  .itm-SEC3 {
+    width: 40%;
     flex-direction: column;
-    align-items: start;
-}
-.itm-SEC3>div>p{
-    text-align: right;
-    color: var(--gray-text);
+    justify-self: center;
+    align-items: center;
+    gap: 0px;
+  }
+  .itm-SEC3 > div {
+    align-items: center;
+  }
+  .itm-SEC3 > div > p,.itm-SEC3 > div > h2 {
+    text-align: center;
+    font-size: 12px;
+  }
 }
