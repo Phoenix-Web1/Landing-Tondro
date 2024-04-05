@@ -1,18 +1,13 @@
-
-
 .SEC-2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   justify-content: center;
-  margin: 0 auto;
   align-items: center;
-}
-
-.SEC-2 {
-  margin: 0 auto;
   text-align: center;
+  width: 90%;
+  margin: 0 auto 70px auto;
 }
 
 .SEC-2 > h1 {
@@ -47,9 +42,6 @@
   gap: 10px;
   justify-content: center;
   width: 90%;
-}
-.mainSec * {
-  width: 100%;
 }
 
 .SEC-2 > div > div {
@@ -95,7 +87,10 @@
 .mainSec:last-of-type {
   display: flex;
 }
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
+  .SEC-2 {
+    margin: 0 auto 100px auto;
+  }
   .SEC-2 > h1 {
     font-size: 40px;
   }
@@ -115,10 +110,6 @@
   }
   .mainSec h2 {
     text-align: right;
-  }
-  .SEC-2 > div {
-  }
-  .SEC-2 > div * {
   }
   .SEC-2 > div > div {
     align-items: flex-end;
@@ -143,13 +134,13 @@
     width: auto;
     margin-top: 15%;
   }
+  .flashGuide {
+    margin-top: 10%;
+    width: 10%;
+  }
 }
 
 .flashGuide {
   width: 5%;
   margin-top: 5%;
-}
-
-.flashGuide {
-  width: 5%;
 }
