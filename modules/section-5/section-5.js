@@ -9,6 +9,10 @@ export function createSection5() {
   // Function to create horizontal scrolling container with images and links
   function createScrollingContainer() {
     // Create main container
+    const container = document.createElement("div");
+    container.classList.add("container");
+
+    // Create scroll container
     const scrollContainer = document.createElement("div");
     scrollContainer.classList.add("scroll-container");
 
@@ -47,43 +51,21 @@ export function createSection5() {
     // Append content to wrapper
     scrollWrapper.appendChild(scrollContent);
 
-    // Append wrapper to main container
+    // Append wrapper to scroll container
     scrollContainer.appendChild(scrollWrapper);
 
+    // Append scroll container to main container
+    container.appendChild(scrollContainer);
+
     // Append container to the document body
-    document.body.appendChild(scrollContainer);
+    document.body.appendChild(container);
 
     // Enable smooth scrolling
-    enableSmoothScrolling(scrollWrapper);
+    enableSmoothScrolling(scrollContainer);
   }
 
   // Function to enable smooth scrolling
   function enableSmoothScrolling(container) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    container.addEventListener("mousedown", (e) => {
-      isDown = true;
-      startX = e.pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-      e.preventDefault();
-    });
-    container.addEventListener("mouseleave", () => {
-      isDown = false;
-    });
-    container.addEventListener("mouseup", () => {
-      isDown = false;
-    });
-    container.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - container.offsetLeft;
-      const walk = (x - startX) * 2; // Adjust scrolling speed if needed
-      container.scrollLeft = scrollLeft - walk;
-    });
-
-    // Enable smooth scroll with mouse wheel
     container.addEventListener("wheel", (e) => {
       e.preventDefault();
       container.scrollLeft += e.deltaY;
