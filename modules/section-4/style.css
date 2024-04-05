@@ -14,7 +14,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 1000px) {
 
     *{
         font-family: iransans;
@@ -28,12 +28,13 @@
         align-items: center;
         max-width: 1600px;
         margin: 0 auto;
+        background-size: cover;
     }
 
     .map-cart{
         width: 40%;
-        height: 70%;
-        margin-right: 5%;
+        height: 80%;
+        margin-right: 3%;
         background-color: #2b6fbd1e;
         border-radius:5px;
         display: flex;
