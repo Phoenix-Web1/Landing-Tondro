@@ -1,0 +1,13 @@
+#map{
+    display: none;
+}
+
+@media only screen and (min-width: 650px) {
+
+    #map{
+        display: flex;
+        background-image: url(section-4-images/Map.png);
+        height: 530px;
+    }
+
+}
