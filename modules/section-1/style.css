@@ -186,7 +186,7 @@ button:focus {
     width: 100%;
     position: absolute;
     bottom: -125px;
-    max-width: 1250px;
+    width: 1250px;
   }
 
   .guide-flash {
