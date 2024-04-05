@@ -45,6 +45,7 @@
   height: auto; /* Maintain aspect ratio */
 }
 
+
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
   /* Hide default scrollbar and ensure smooth scrolling */
@@ -67,5 +68,9 @@
     max-width: calc(33.33% - 2px); /* Adjust max-width to fit three images with margin */
     display: block; /* Ensure each link takes full width */
     filter: grayscale(100%); /* Initially grayscale */
+  }
+
+  h1{
+    font-size: 20px;
   }
 }
