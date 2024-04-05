@@ -27,5 +27,8 @@
         flex-direction: column;
     }
 
+    .map-cart{
+        text-align: center;
+    }
     
 }
