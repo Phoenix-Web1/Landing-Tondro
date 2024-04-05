@@ -1,14 +1,13 @@
-// Execute when DOM content is loaded
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to create dynamic buttons
-  function createDynamicButton(text) {
-    const dynamicButton = document.createElement("button");
-    dynamicButton.textContent = text; // Set button text
-    dynamicButton.classList.add("dynamicButton"); // Add class for styling
-    return dynamicButton; // Return the created button
-  }
+// Function to create dynamic buttons
+export function createDynamicButton(text) {
+  const dynamicButton = document.createElement("button");
+  dynamicButton.textContent = text; // Set button text
+  dynamicButton.classList.add("dynamicButton"); // Add class for styling
+  return dynamicButton; // Return the created button
+}
 
-  // Create header element
+// Function to create header
+export function createHeader() {
   const header = document.createElement("header");
   header.id = "mainHeader"; // Set header ID
 
@@ -53,21 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Array of menu items
   const menuItems = [
-    "خانه",
-    "درخواست خرید",
-    "درخواست سفیر",
-    "درباره ما",
-    "قوانین",
+      "خانه",
+      "درخواست خرید",
+      "درخواست سفیر",
+      "درباره ما",
+      "قوانین",
   ];
 
   // Create list items and anchor tags dynamically for each menu item
   menuItems.forEach((item) => {
-    const li = document.createElement("li"); // Create list item
-    const a = document.createElement("a"); // Create anchor tag
-    a.href = "#"; // Set href attribute
-    a.textContent = item; // Set anchor text
-    li.appendChild(a); // Append anchor tag to list item
-    ul.appendChild(li); // Append list item to ul
+      const li = document.createElement("li"); // Create list item
+      const a = document.createElement("a"); // Create anchor tag
+      a.href = "#"; // Set href attribute
+      a.textContent = item; // Set anchor text
+      li.appendChild(a); // Append anchor tag to list item
+      ul.appendChild(li); // Append list item to ul
   });
 
   // Append navigation to header
@@ -86,21 +85,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle navigation visibility on button click
   toggleNavButton.addEventListener("click", function () {
-    nav.classList.toggle("open"); // Toggle 'open' class for navigation
-    overlay.style.display = nav.classList.contains("open") ? "block" : "none"; // Toggle display of overlay
+      nav.classList.toggle("open"); // Toggle 'open' class for navigation
+      overlay.style.display = nav.classList.contains("open") ? "block" : "none"; // Toggle display of overlay
   });
 
   // Close navigation when clicking outside of it
   document.addEventListener("click", function (event) {
-    const nav = document.getElementById("mainNav"); // Get navigation element
-    const toggleNavButton = document.getElementById("toggleNav"); // Get toggle button element
-    if (
-      !nav.contains(event.target) && // Check if click is outside navigation
-      event.target !== toggleNavButton && // Check if click is not on toggle button
-      nav.classList.contains("open") // Check if navigation is open
-    ) {
-      nav.classList.remove("open"); // Remove 'open' class from navigation
-      overlay.style.display = "none"; // Hide overlay
-    }
+      const nav = document.getElementById("mainNav"); // Get navigation element
+      const toggleNavButton = document.getElementById("toggleNav"); // Get toggle button element
+      if (
+          !nav.contains(event.target) && // Check if click is outside navigation
+          event.target !== toggleNavButton && // Check if click is not on toggle button
+          nav.classList.contains("open") // Check if navigation is open
+      ) {
+          nav.classList.remove("open"); // Remove 'open' class from navigation
+          overlay.style.display = "none"; // Hide overlay
+      }
   });
-});
+}
