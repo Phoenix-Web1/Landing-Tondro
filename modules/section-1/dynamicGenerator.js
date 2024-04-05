@@ -37,7 +37,7 @@ let section = createDynamicElement('section',{id: "hero-banner-section"} , [
   // create section1 container
     createDynamicElement('div',{id :'hero-banner-container'},null,[
       createDynamicElement("div", { class: "hero-banner-background" }, null, [
-        
+        createDynamicElement("img", { src: "section-1-images/hero.png", alt: "Hero Image" }),
       ])
     ])
 ])
