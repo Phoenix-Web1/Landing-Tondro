@@ -1,12 +1,11 @@
 // index.js
 
-import { createHeader, createDynamicButton } from "./modules/header/header.js";
-import { createSection2 } from "./modules/footer/footer.js";
-import { createSection3 } from "./modules/section-2/section-2.js";
-import { createSection5 } from "./modules/section-5/section-5.js";
-import { createFooter } from "./modules/footer/footer.js";
+import { createHeader, createDynamicButton } from "/modules/header/header.js";
+import { createSection2 } from "/modules/section-2/section-2.js";
+import { createSection3 } from "/modules/section-3/section-3.js";
+import { createSection5 } from "/modules/section-5/section-5.js";
+import { createFooter } from "/modules/footer/footer.js";
 
-createFooter();
 // Call createHeader function to create the header
 createHeader();
 
@@ -22,3 +21,5 @@ createSection3();
 
 // Call createSection5 function to generate section-5
 createSection5();
+
+createFooter();
