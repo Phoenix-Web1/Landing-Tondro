@@ -11,6 +11,11 @@
   --text-color: #252736
   --btn-text-color: #ececec;
   --btn-backgroundcolor: #003d95;
+
+  --title-color: #353535;
+  --text-color: #787878;
+  --btn-text-color: #ececec;
+  --btn-backgroundcolor: #003d95;
 }
 * {
   margin: 0;
