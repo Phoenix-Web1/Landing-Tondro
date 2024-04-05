@@ -1,173 +1,184 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #FEFEFE;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
 :root {
-    --black-text: #252736;
-    --gray-text: #353535;
-    --primary-color: #003D95;
+  --black-text: #252736;
+  --gray-text: #353535;
+  --primary-color: #003d95;
 }
 
 @font-face {
-    font-family: IRANSans;
-    src: url(font/IRANSansXV.woff);
+  font-family: IRANSans;
+  src: url(font/IRANSansXV.woff);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: IRANSans;
+  margin: 0;
+  padding: 0;
+  font-family: IRANSans;
 }
 
 button {
-    border-radius: 5px;
-    cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .SEC-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .SEC-2 {
-    margin: 0 auto ;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.SEC-2>h1 {
-    color: var(--black-text);
-    font-size: 25px;
+.SEC-2 > h1 {
+  color: var(--black-text);
+  font-size: 25px;
 }
 
-.SEC-2>div:first-of-type {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: row;
-    gap: 4%;
+.SEC-2 > div:first-of-type {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4%;
 }
 
-.SEC-2>div:first-of-type>button {
-    font-size: 15px;
-    color: var(--gray-text);
-    width: 45%;
-    height: 50px;
-    border: none;
-    background-color: #fff;
+.SEC-2 > div:first-of-type > button {
+  font-size: 15px;
+  color: var(--gray-text);
+  width: 45%;
+  height: 50px;
+  border: none;
+  background-color: #fff;
 }
 
-.SEC-2>div:first-of-type>.active-sec2 {
-    color: var(--primary-color) ;
-    border-bottom: 2px var(--primary-color) solid;
+.SEC-2 > div:first-of-type > .active-sec2 {
+  color: var(--primary-color);
+  border-bottom: 2px var(--primary-color) solid;
 }
 .mainSec {
-    display: flex;
-    flex-direction: column ;
-    gap: 10px;
-    justify-content: center;
-    width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  width: 90%;
 }
-.mainSec *{
-    width: 100%;
-}
-
-.SEC-2>div>div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+.mainSec * {
+  width: 100%;
 }
 
-.SEC-2>div>div>h2 {
-    font-size: 25px;
-    color: var(--black-text);
+.SEC-2 > div > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.SEC-2>div>div>p {
-    width: 80%;
-    color: var(--gray-text);
+.SEC-2 > div > div > h2 {
+  font-size: 25px;
+  color: var(--black-text);
 }
 
-.SEC-2>div>div>button {
-    background-color: #fff;
-    color: var(--primary-color);
-    border: 2px var(--primary-color) solid;
-    width: 40%;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    font-size: 15px;
+.SEC-2 > div > div > p {
+  width: 80%;
+  color: var(--gray-text);
 }
 
-.SEC-2>div>div>button:before {
-    content: url(img/arrow-left.png);
-    height: 23px;
+.SEC-2 > div > div > button {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 2px var(--primary-color) solid;
+  width: 40%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
 }
-.mainSec{
-    display: none;
-    width: 90%;
+
+.SEC-2 > div > div > button:before {
+  content: url(img/arrow-left.png);
+  height: 23px;
 }
-.mainSec:last-of-type{
-    display: flex;
+.mainSec {
+  display: none;
+  width: 90%;
+}
+.mainSec:last-of-type {
+  display: flex;
 }
 @media screen and (min-width: 950px) {
-    .SEC-2>h1 {
-        font-size: 40px;
-    }
+  .SEC-2 > h1 {
+    font-size: 40px;
+  }
 
-    .SEC-2>div:first-of-type {
-        display: none;
-    }
-    .mainSec{
-        display: flex;
-        flex-direction: row ;
-        margin: 0 50px ;
-        border: 1px #f3f3f3 solid ;
-        box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1) ;
-    }
-    .mainSec h2{
-        text-align: right;
-    }
-    .SEC-2>div>* {
-        width: 40%;
-    }
+  .SEC-2 > div:first-of-type {
+    display: none;
+  }
+  .mainSec {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px;
+    border: 1px #f3f3f3 solid;
+    box-shadow: 0px 8px 34px 1px rgba(114, 125, 135, 0.1);
+  }
+  .mainSec:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .mainSec h2 {
+    text-align: right;
+  }
+  .SEC-2 > div{
+    
+  }
+  .SEC-2 > div *{
+    
+  }
+  .SEC-2 > div > div {
+    align-items: flex-end;
+  }
 
-    .SEC-2>div>div {
-        align-items: flex-end;
-    }
+  .SEC-2 > div > div > h2 {
+    font-size: 24px;
+  }
 
-    .SEC-2>div>div>h2 {
-        font-size: 24px;
-    }
+  .SEC-2 > div > div > p {
+    direction: rtl;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 
-    .SEC-2>div>div>p {
-        direction: rtl;
-        text-align: right;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .SEC-2>div>div>button {
-        margin: 0 auto;
-        font-size: 16px;
-        padding: 15px;
-        height: 47px;
-        width: auto;
-    }
-
+  .SEC-2 > div > div > button {
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 15px;
+    height: 47px;
+    width: auto;
+    margin-top: 15%;
+  }
 }
 
+<<<<<<< Updated upstream
 .flashGuide{
     width: 5%;
     margin-top: 5%;
 }
+=======
+.flashGuide {
+  width: 5%;
+}
+>>>>>>> Stashed changes
