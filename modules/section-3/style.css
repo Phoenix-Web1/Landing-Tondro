@@ -1,0 +1,56 @@
+/* add defalt css [start] */
+*{
+    margin: 0;
+    padding: 0;
+    font-family:IRANSans ;
+}
+h1,h2{
+    color: var(--black-text);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FEFEFE;
+}
+:root {
+  --black-text: #252736;
+  --gray-text: #353535;
+  --primary-color: #003d95;
+}
+@font-face {
+  font-family: IRANSans;
+  src: url(/font/IRANSansXV.woff);
+}
+/* add defalt css [end] */
+.SEC-3{
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+.body-SEC-3{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.itm-SEC3{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 45%;
+    direction: rtl;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 34px rgba(197, 72, 241, 0.08);
+}
+.itm-SEC3>div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.itm-SEC3>div>p{
+    text-align: right;
+    color: var(--gray-text);
+}
