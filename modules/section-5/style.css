@@ -1,0 +1,27 @@
+/* Set overflow behavior to allow horizontal scrolling */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevent wrapping of content */
+}
+
+/* Display scroll wrapper as inline-block to allow for scrolling */
+.scroll-wrapper {
+  display: inline-block;
+}
+
+/* Set content container to flex display for flexible layout */
+.scroll-content {
+  display: flex;
+}
+
+/* Style individual links within the content */
+.scroll-content a {
+  flex: 0 0 auto; /* Allow links to shrink or grow as needed */
+  margin-right: 10px; /* Add margin between each link (adjust as needed) */
+}
+
+/* Style images within the content */
+.scroll-content img {
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
