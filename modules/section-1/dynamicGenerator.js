@@ -46,7 +46,7 @@ let section = createDynamicElement('section',{id: "hero-banner-section"} , [
     ]),
     
     createDynamicElement("div", { class: "hero-description" }, null, [
-      
+      createDynamicElement("h1", null, "سامانه تنرو"),
     ])
 
  
