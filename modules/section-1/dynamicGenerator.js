@@ -37,8 +37,8 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
       createDynamicElement("img", { src: "section-1-images/shadow.png", alt: "" })
     ]),
     createDynamicElement("img", { class: "subtract", src: "section-1-images/Subtract (1).png", alt: "Subtract Image" }),
-    createDynamicElement("img", { class: "subtract-des", src: "section-1-images/Subtract(des).svg", alt: "Subtract Image" })
   ]),
+  createDynamicElement("img", { class: "subtract-des", src: "section-1-images/Subtract-desktop.svg", alt: "Subtract Image" }),
    // end of section1 container
   //  ------------------------
   createDynamicElement("div", { class: "hero-description" }, null, [
@@ -50,4 +50,4 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
 ]);
 
 document.body.appendChild(section);
-
+console.log(section)

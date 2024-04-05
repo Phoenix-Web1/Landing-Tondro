@@ -31,7 +31,7 @@
       margin: 0 auto;
       padding-top: 12%;
       position: relative;
-      overflow: hidden;
+      /* overflow: hidden; */
       height: 320px;
       max-width: 375px;
       width: 100%;
@@ -54,9 +54,11 @@
       /* bottom: -12px; */
       bottom: -2%;
   }
-.subtract-des{
-    display: none;
-}
+
+  .subtract-des {
+      display: none;
+  }
+
   /* Styles for the first image (hero) */
   .hero-banner-background>img:nth-child(1) {
       position: absolute;
@@ -138,6 +140,10 @@
       #hero-banner-section {
           flex-direction: row;
           /* flex-wrap: wrap; */
+          position: relative;
+      }
+      .hero-banner-container{
+        overflow: visible;
       }
 
       .hero-description {
@@ -152,12 +158,12 @@
 
       /* title */
       .hero-description h1 {
-        
-        margin: 10% 0;
+
+          margin: 10% 0;
       }
 
       .hero-description span {
-        max-width: 400px;
+          max-width: 400px;
       }
 
       .hero-description button {
@@ -165,10 +171,11 @@
           margin-top: 10%;
       }
 
-      .subtract-des{
-        display: block;
-        width: 100px;
-        height: 100px;
+      .subtract-des {
+          display: block;
+          width: 100%;
+          position: absolute;
+          bottom: -19%;
       }
   }
 
