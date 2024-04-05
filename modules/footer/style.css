@@ -19,6 +19,7 @@
 #footerContent h2,
 #footerContent span {
   line-height: 23px; /* Set line height for heading and text */
+  color: #fff;
 }
 
 #footerContent div {
