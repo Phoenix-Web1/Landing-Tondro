@@ -1,0 +1,21 @@
+@font-face {
+    font-family: iransans;
+    src: url(font/IRANSansXV.woff);
+}
+*{
+    font-family: iransans ;
+}
+.social-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-section p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.social-section div img{
+    margin: 0 5px;
+}
