@@ -13,7 +13,7 @@ h2 {
 body {
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: #f0f0f0;
 }
 :root {
   --black-text: #252736;
@@ -76,12 +76,16 @@ body {
     justify-self: center;
     align-items: center;
     gap: 0px;
+    padding: 20px;
   }
   .itm-SEC3 > div {
     align-items: center;
   }
-  .itm-SEC3 > div > p,.itm-SEC3 > div > h2 {
+  .itm-SEC3 > div > p {
     text-align: center;
     font-size: 12px;
+  }
+  .itm-SEC3 > div > h2{
+    font-size: 16px;
   }
 }
