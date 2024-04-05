@@ -36,7 +36,8 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
       createDynamicElement("img", { src: "section-1-images/arrow.svg", alt: "" }),
       createDynamicElement("img", { src: "section-1-images/shadow.png", alt: "" })
     ]),
-    createDynamicElement("img", { class: "subtract", src: "section-1-images/Subtract (1).png", alt: "Subtract Image" })
+    createDynamicElement("img", { class: "subtract", src: "section-1-images/Subtract (1).png", alt: "Subtract Image" }),
+    createDynamicElement("img", { class: "subtract-des", src: "section-1-images/Subtract(des).svg", alt: "Subtract Image" })
   ]),
    // end of section1 container
   //  ------------------------
@@ -45,7 +46,7 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
     createDynamicElement("span", null, "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"),
     createDynamicElement("button", null, "درخواست سفیر")
   ]),
-  createDynamicElement("img", { class: "guide-flash", src: "section-1-images/Vector 4.svg", alt: "" })
+  // createDynamicElement("img", { class: "guide-flash", src: "section-1-images/Vector 4.svg", alt: "" })
 ]);
 
 document.body.appendChild(section);

@@ -54,7 +54,9 @@
       /* bottom: -12px; */
       bottom: -2%;
   }
-
+.subtract-des{
+    display: none;
+}
   /* Styles for the first image (hero) */
   .hero-banner-background>img:nth-child(1) {
       position: absolute;
@@ -70,11 +72,11 @@
   }
 
   .hero-banner-background>img:nth-child(3) {
-    /* background-color: #353535; */
-    position: absolute;
-    left: 40%;
-    top: 85%;
-    box-shadow: 100px 100px 0px 0px #fff ;
+      /* background-color: #353535; */
+      position: absolute;
+      left: 40%;
+      top: 85%;
+      box-shadow: 100px 100px 0px 0px #fff;
   }
 
   /* Styles for shodow image */
@@ -88,8 +90,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       margin-top: -35px;
       z-index: 1;
+      /* background-color: #003D95; */
   }
 
   /* Center align the text elements within the hero description */
@@ -114,7 +118,6 @@
   .hero-description button {
       width: 172px;
       height: 43px;
-      margin: 0 auto;
       margin-top: 5%;
       color: var(--btn-text-color);
       background-color: var(--btn-backgroundcolor);
@@ -122,15 +125,74 @@
       border-radius: 5px;
       font-size: 14px;
   }
-  .guide-flash{
-    width: 15%;
-    margin: 0 auto;
-    margin-top: 20%;
+
+  .guide-flash {
+      width: 15%;
+      margin: 0 auto;
+      margin-top: 20%;
   }
 
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (min-width: 650px) {
 
-    
-    
+      #hero-banner-section {
+          flex-direction: row;
+          /* flex-wrap: wrap; */
+      }
+
+      .hero-description {
+          align-items: end;
+          margin: 0 5%;
+      }
+
+      .hero-description * {
+          direction: rtl;
+          text-align: right;
+      }
+
+      /* title */
+      .hero-description h1 {
+        
+        margin: 10% 0;
+      }
+
+      .hero-description span {
+        max-width: 400px;
+      }
+
+      .hero-description button {
+          text-align: center;
+          margin-top: 10%;
+      }
+
+      .subtract-des{
+        display: block;
+        width: 100px;
+        height: 100px;
+      }
   }
+
+
+  /* <!-- <section id="hero-banner-section">
+
+  <div class="hero-banner-container">
+      <div class="hero-banner-background">
+          <img src="section-1-images/hero.png" alt="Hero Image">
+          <img src="section-1-images/Logotype.png" alt="Logotype Image">
+          <img src="section-1-images/arrow.svg" alt="">
+          <img src="section-1-images/shadow.png" alt="">
+          
+      </div>
+      <img class="subtract" src="section-1-images/Subtract (1).png" alt="Subtract Image">
+  </div>
+
+  <div class="hero-description">
+      <h1>سامانه تنرو</h1>
+      <span>دریافت سریع خدمات حمل و نقل و انجام کار
+          با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر
+      </span>
+      <button>درخواست سفیر</button>
+  </div>
+
+  <img class="guide-flash " src="section-1-images/Vector 4.svg" alt="">
+</section> --> */
