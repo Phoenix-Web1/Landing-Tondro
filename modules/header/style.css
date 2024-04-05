@@ -2,7 +2,7 @@
 #mainHeader {
   background-color: #e0e0e0; /* Background color */
   color: #fff; /* Text color */
-  padding: 20px 40px; /* Padding */
+  padding: 10px 40px 20px 40px !important; /* Padding */
   display: flex; /* Display as flexbox */
   justify-content: space-between; /* Align items with space between them */
   align-items: center; /* Center align items vertically */
