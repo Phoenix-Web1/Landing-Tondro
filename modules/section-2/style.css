@@ -141,11 +141,9 @@ button {
   .mainSec h2 {
     text-align: right;
   }
-  .SEC-2 > div{
-    
+  .SEC-2 > div {
   }
-  .SEC-2 > div *{
-    
+  .SEC-2 > div * {
   }
   .SEC-2 > div > div {
     align-items: flex-end;
@@ -172,13 +170,11 @@ button {
   }
 }
 
-
-.flashGuide{
-    width: 5%;
-    margin-top: 5%;
+.flashGuide {
+  width: 5%;
+  margin-top: 5%;
 }
 
 .flashGuide {
   width: 5%;
 }
-

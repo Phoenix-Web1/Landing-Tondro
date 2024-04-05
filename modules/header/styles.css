@@ -1,3 +1,16 @@
+:root {
+  --black-text: #252736;
+  --gray-text: #353535;
+  --primary-color: #003d95;
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url(/font/IRANSansXV.woff);
+}
+*{
+  font-family: IRANSans ;
+}
 /* Styling for the main header */
 #mainHeader {
   background-color: #e0e0e0; /* Background color */
@@ -12,7 +25,6 @@
   right: 0; /* Stretch to the right */
   z-index: 1000;
 }
-
 /* Styling for dynamic buttons */
 .dynamicButton {
   background-color: #003d95; /* Background color */
@@ -26,7 +38,9 @@
   cursor: pointer; /* Cursor style */
   border-radius: 5px; /* Border radius */
 }
-
+.dynamicButton:hover{
+  background-color: #2B6FBD;
+}
 /* Styling for the toggle navigation button */
 #toggleNav {
   background-color: transparent; /* Background color */
@@ -85,11 +99,10 @@
   display: block; /* Display as block */
   font-size: 22px; /* Font size */
 }
-
+#menuItems li a:hover{
+  color: var(--primary-color);
+} 
 /* Set color for the first link */
-#menuItems li:first-child a {
-  color: #164695; /* Color for the first link */
-}
 
 /* Styling for the logo container */
 .logo-container {
@@ -153,7 +166,9 @@
   #menuItems li {
     margin: 0 20px; /* Margin between menu items */
   }
-
+  #menuItems li a:hover{
+    color: var(--primary-color);
+  }
   #menuItems li a {
     padding: 0; /* Remove padding for menu items */
     font-size: 16px; /* Adjust font size for desktop */
@@ -199,5 +214,8 @@
   .dynamicButton {
     font-size: 18px; /* Increase font size */
     padding: 15px 57px; /* Adjust padding */
+  }
+  .dynamicButton:hover{
+    background-color: #2B6FBD;
   }
 }
