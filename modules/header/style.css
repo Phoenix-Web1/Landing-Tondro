@@ -1,16 +1,3 @@
-:root {
-  --black-text: #252736;
-  --gray-text: #353535;
-  --primary-color: #003d95;
-}
-
-@font-face {
-  font-family: IRANSans;
-  src: url(/font/IRANSansXV.woff);
-}
-*{
-  font-family: IRANSans ;
-}
 /* Styling for the main header */
 #mainHeader {
   background-color: #e0e0e0; /* Background color */

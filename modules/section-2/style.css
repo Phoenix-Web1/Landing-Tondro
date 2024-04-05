@@ -1,29 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-:root {
-  --black-text: #252736;
-  --gray-text: #353535;
-  --primary-color: #003d95;
-}
 
-@font-face {
-  font-family: IRANSans;
-  src: url(font/IRANSansXV.woff);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: IRANSans;
-}
-
-button {
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 .SEC-2 {
   display: flex;

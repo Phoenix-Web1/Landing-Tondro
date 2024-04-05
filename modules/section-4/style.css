@@ -1,14 +1,4 @@
-@font-face {
-    font-family: iransans;
-    src: url(font/IRANSansXV.woff);
-}
 
-:root {
-    --title-color: #353535;
-    --text-color: #787878;
-    --btn-text-color: #ECECEC;
-    --btn-backgroundcolor: #003D95;
-}
 
 #map{
     display: none;
@@ -58,7 +48,7 @@
         font-weight: 500;
     }
 
-     button {
+     .map-cart button {
         width: 172px;
         height: 43px;
         margin-top: 5%;
