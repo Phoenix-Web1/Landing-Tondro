@@ -1,6 +1,48 @@
 /* Default styles */
 .scroll-container {
   overflow-x: auto; /* Use default scroll behavior */
+  white-space: nowrap; /* Prevent wrapping of content */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+/* Hide default scrollbar for desktop */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Set content container to flex display for flexible layout */
+.scroll-content {
+  display: flex;
+  font-size: 0; /* Remove white space between images */
+}
+
+/* Style individual links within the content for desktop */
+@media only screen and (min-width: 769px) {
+  .scroll-content a {
+    flex: 0 0 auto; /* Allow links to shrink or grow as needed */
+    margin-right: calc(-7% - 2px); /* Add margin between each row of images */
+    width: calc(25% - 2px); /* Adjust width to fit four images with margin */
+    max-width: calc(25% - 2px); /* Adjust max-width to fit four images with margin */
+    display: block; /* Ensure each link takes full width */
+    filter: grayscale(100%); /* Initially grayscale */
+  }
+  
+  /* Adjust margin-right for the last image */
+  .scroll-content a:last-child {
+    margin-right: 0; /* Remove margin-right for the last image */
+    margin-left: auto; /* Push the last image to the right */
+  }
+}
+
+/* Change filter to revert grayscale on hover */
+.scroll-content a:hover {
+  filter: none; /* Revert grayscale on hover */
+}
+
+/* Style images within the content */
+.scroll-content img {
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Media query for mobile devices */
@@ -17,35 +59,13 @@
     display: none;
   }
 
-  /* Set content container to flex display for flexible layout */
-  .scroll-content {
-    display: flex;
-    transition: transform 0.3s ease; /* Add smooth transition */
-    font-size: 0; /* Remove white space between images */
-  }
-
-  /* Style individual links within the content */
+  /* Style individual links within the content for mobile */
   .scroll-content a {
     flex: 0 0 auto; /* Allow links to shrink or grow as needed */
-    margin-right: 10px; /* Add margin between each link (adjust as needed) */
-    width: calc(
-      100% / 3 - 10px
-    ); /* Adjust width to fit three images with margin */
-    max-width: calc(
-      100% / 3 - 10px
-    ); /* Adjust max-width to fit three images with margin */
+    margin-right: 2px; /* Add margin between each link (adjust as needed) */
+    width: calc(33.33% - 2px); /* Adjust width to fit three images with margin */
+    max-width: calc(33.33% - 2px); /* Adjust max-width to fit three images with margin */
     display: block; /* Ensure each link takes full width */
     filter: grayscale(100%); /* Initially grayscale */
-  }
-
-  /* Change filter to revert grayscale on hover */
-  .scroll-content a:hover {
-    filter: none; /* Revert grayscale on hover */
-  }
-
-  /* Style images within the content */
-  .scroll-content img {
-    max-width: 100%; /* Ensure images don't exceed container width */
-    height: auto; /* Maintain aspect ratio */
   }
 }
