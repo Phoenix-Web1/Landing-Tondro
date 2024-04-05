@@ -24,6 +24,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 1300px;
   }
 
   /* Styles for the hero banner container */
@@ -73,6 +74,8 @@
       top: -20px;
   }
 
+
+    /* down arrow */
   .hero-banner-background>img:nth-child(3) {
       /* background-color: #353535; */
       position: absolute;
@@ -117,7 +120,7 @@
   }
 
   /* Styles for the hero button */
-  button {
+  .hero-description  button {
       width: 172px;
       height: 43px;
       margin-top: 5%;
@@ -126,6 +129,7 @@
       border: none;
       border-radius: 5px;
       font-size: 14px;
+      /* margin-bottom: 10%; */
       transition-property: background-color;
       transition-duration: .3s;
   }
@@ -141,7 +145,7 @@
   }
 
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: 1000px) {
 
       #hero-banner-section {
           flex-direction: row;
@@ -155,7 +159,8 @@
 
       .hero-description {
           align-items: end;
-          margin: 0 5%;
+          /* margin: 0 5%; */
+          margin-right: 7%;
       }
 
       .hero-description * {
@@ -175,18 +180,22 @@
 
       .hero-description button {
           text-align: center;
-          margin-top: 10%;
+          /* margin-top: 10%; */
       }
 
       .subtract-des {
           display: block;
           width: 100%;
           position: absolute;
-          bottom: -19%;
+          bottom: -100px;
+          max-width: 1250px;
       }
 
       .guide-flash {
           display: none;
+      }
+      .hero-banner-background>img:nth-child(3){
+        display: none;
       }
   }
 
