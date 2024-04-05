@@ -1,4 +1,10 @@
 /* Default styles */
+.container {
+  width: 90%; /* Container occupies 90% of the viewport width */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Hide content overflowing from container */
+}
+
 .scroll-container {
   overflow-x: auto; /* Use default scroll behavior */
   white-space: nowrap; /* Prevent wrapping of content */
@@ -14,6 +20,32 @@
 .scroll-content {
   display: flex;
   font-size: 0; /* Remove white space between images */
+}
+
+/* Style individual links within the content for desktop */
+.scroll-content a {
+  flex: 0 0 auto; /* Allow links to shrink or grow as needed */
+  margin-right: 2px; /* Add margin between each link (adjust as needed) */
+  width: calc(33.33% - 2px); /* Adjust width to fit three images with margin */
+  max-width: calc(33.33% - 2px); /* Adjust max-width to fit three images with margin */
+  display: block; /* Ensure each link takes full width */
+  filter: grayscale(100%); /* Initially grayscale */
+}
+
+/* Adjust margin-right for the last image */
+.scroll-content a:last-child {
+  margin-right: 0; /* Remove margin-right for the last image */
+}
+
+/* Change filter to revert grayscale on hover */
+.scroll-content a:hover {
+  filter: none; /* Revert grayscale on hover */
+}
+
+/* Style images within the content */
+.scroll-content img {
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Style individual links within the content for desktop */
