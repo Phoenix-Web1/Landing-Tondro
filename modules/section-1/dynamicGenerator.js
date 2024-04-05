@@ -50,8 +50,8 @@ let section = createDynamicElement('section',{id: "hero-banner-section"} , [
       createDynamicElement("span", null, "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"),
       createDynamicElement("button", null, "درخواست سفیر")
 
-    ])
-
+    ]),
+    createDynamicElement("img", { class: "guide-flash", src: "section-1-images/Vector 4.svg", alt: "" })
  
 ])
 
