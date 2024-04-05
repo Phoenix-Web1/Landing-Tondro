@@ -31,14 +31,14 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
     // create hero-banner-background
     // start of banner background
     createDynamicElement("div", { class: "hero-banner-background" }, null, [
-      createDynamicElement("img", { src: "section-1-images/hero.png", alt: "Hero Image" }),
-      createDynamicElement("img", { src: "section-1-images/Logotype.png", alt: "Logotype Image" }),
-      createDynamicElement("img", { src: "section-1-images/arrow.svg", alt: "" }),
-      createDynamicElement("img", { src: "section-1-images/shadow.png", alt: "" })
+      createDynamicElement("img", { src: "./media/hero.png", alt: "Hero Image" }),
+      createDynamicElement("img", { src: "./media/Logotype.png", alt: "Logotype Image" }),
+      createDynamicElement("img", { src: "./media/arrow.svg", alt: "" }),
+      createDynamicElement("img", { src: "./media/shadow.png", alt: "" })
     ]),
-    createDynamicElement("img", { class: "subtract", src: "section-1-images/Subtract (1).png", alt: "Subtract Image" }),
+    createDynamicElement("img", { class: "subtract", src: "./media/Subtract (1).png", alt: "Subtract Image" }),
   ]),
-  createDynamicElement("img", { class: "subtract-des", src: "section-1-images/Subtract-desktop.svg", alt: "Subtract Image" }),
+  createDynamicElement("img", { class: "subtract-des", src: "./media/Subtract-desktop.svg", alt: "Subtract Image" }),
    // end of section1 container
   //  ------------------------
   createDynamicElement("div", { class: "hero-description" }, null, [
@@ -46,7 +46,7 @@ var section = createDynamicElement("section", { id: "hero-banner-section" }, nul
     createDynamicElement("span", null, "دریافت سریع خدمات حمل و نقل و انجام کار با 5 سال سابقه کار با بزرگترین فروشگاه ها و سازمان های بوشهر"),
     createDynamicElement("button", null, "درخواست سفیر")
   ]),
-  createDynamicElement("img", { class: "guide-flash", src: "section-1-images/Vector 4.svg", alt: "" })
+  createDynamicElement("img", { class: "guide-flash", src: "./media/Vector 4.svg", alt: "" })
 ]);
 
 document.body.appendChild(section);
